@@ -3,10 +3,13 @@
 // Declare app level module which depends on views, and components
 angular.module('myApp', [
   'ngRoute',
-  'myApp.view1',
+  'myApp.event',
   'myApp.view2',
-  'myApp.version'
+  'myApp.version',
+  'restangular'
 ]).
-config(['$routeProvider', function($routeProvider) {
-  $routeProvider.otherwise({redirectTo: '/view1'});
+config(['$routeProvider', function($routeProvider, RestangularProvider) {
+  $routeProvider.otherwise({redirectTo: '/event'});
+
+  RestangularProvider.setBaseUrl('http://localhost:8002');
 }]);
