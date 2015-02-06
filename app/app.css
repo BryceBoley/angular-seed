@@ -1,3 +1,5 @@
+
+
 h1 {
   text-transform: uppercase;
   background-color: #79d08f;
@@ -42,13 +44,8 @@ nav ul li a:active {
   background-color: #ff3219;
 }
 
-nav ul li:first-child a {
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px; }
 
-nav ul li:last-child a {
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px; }
+
 
 
 

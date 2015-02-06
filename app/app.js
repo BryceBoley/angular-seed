@@ -4,7 +4,8 @@
 angular.module('myApp', [
     'ngRoute',
     'myApp.events',
-    'myApp.view2',
+    'myApp.add_event',
+    'myApp.view3',
     'myApp.version',
     'restangular'
 ])
