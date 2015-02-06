@@ -1,33 +1,33 @@
+nav ul {
+  list-style: none;
+  overflow: hidden;
 
-
-h1 {
+  padding: 0px;
   text-transform: uppercase;
-  background-color: #79d08f;
-  margin: 0px;
-}
-
-nav {
+  background-color: #c8def4;
   width: 100%;
   margin: 0px 0;
   font-size: xx-large;
   font-weight: bolder;
   position: fixed;
-}
 
-nav ul {
-  list-style: none;
-  overflow: hidden; }
+}
 
 nav ul li {
   float: left;
-  width: 20%; }
+  /*width should change for how many buttons we have. If we have 5, it should be 20%. If we have 3 it should be 33% ect*/
+  width: 25%;
+  margin: 0px;
+  padding: 0px;
+  display: inline-block;
+}
 
 nav ul li a {
   text-align: center;
-
+  margin: 0px;
   display: block;
   width: 100%;
-  background-color: #ff5f10;
+  background-color: #cfe5fb;
 
 }
 
@@ -41,7 +41,7 @@ nav ul li a:active {
 nav ul li a:hover,
 
 nav ul li a:active {
-  background-color: #ff3219;
+  background-color: #478fa0;
 }
 
 
