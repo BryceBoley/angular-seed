@@ -16,8 +16,7 @@
                     <textarea class="form-control" ng-model="event.when"></textarea>
                     <label class="form-group">Event Description</label>
                     <textarea class="form-control" ng-model="event.description"></textarea>
-                    <p>Memebers Planning To Attend:</p>
-                    <p ng-repeat="member in group.members">{{ member.name }}</p>
+                    <p>Members Planning To Attend:</p><p ng-repeat="member in event.members">{{ member.name }}</p>
                     <input id="members-input" class="form-control" ng-model="memberName">
                     <button class="btn btn-info btn-xs" ng-click="addMemberToEvent(memberName)"><span class="glyphicon glyphicon-plus"></span>Add Member</button>
                     <label>Comments About Event:</label>
@@ -28,3 +27,8 @@
         </div>
     </div>
 </div>
+
+
+
+
+
