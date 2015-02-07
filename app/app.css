@@ -2,6 +2,7 @@ nav ul {
   list-style: none;
   overflow: hidden;
 
+  position: fixed;
   padding: 0px;
   text-transform: uppercase;
   background-color: #c8def4;
@@ -9,8 +10,6 @@ nav ul {
   margin: 0px 0;
   font-size: xx-large;
   font-weight: bolder;
-  position: fixed;
-
 }
 
 nav ul li {
@@ -45,7 +44,19 @@ nav ul li a:active {
 }
 
 
+table, td, th {
+  border: 1px solid dimgray;
+  border-collapse: collapse;
+  padding: 15px;
+}
 
+table{
+    width: 100%;
+}
+
+td{
+    heigth: 100px;
+}
 
 
 
