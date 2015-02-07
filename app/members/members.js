@@ -9,14 +9,8 @@ angular.module('myApp.members', ['ngRoute'])
         });
     }])
 
-    .controller('MembersCtrl', ['$scope', 'Restangular', '$location', function($scope, Restangular, $location) {
-
-        $scope.addMember = function () {
-            Restangular.all('members/').customPOST($scope.member).then(function () {
-                    alert("Your member was successfully added");
-                    $location.path('/members');
-                },
-                function () {
-                    alert("There was a problem adding your member. Please try again.")
-                })}
+    .controller('MembersCtrl', ['$scope', 'Restangular', function ($scope, Restangular) {
+        Restangular.all('members').getList().then(function (data) {
+            $scope.members = data;
+        });
     }]);

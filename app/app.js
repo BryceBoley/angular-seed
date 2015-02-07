@@ -6,7 +6,7 @@ angular.module('myApp', [
     'myApp.events',
     'myApp.add_event',
     'myApp.members',
-    'myApp.add_member',
+    'myApp.addMember',
     'myApp.version',
     'restangular'
 ])
