@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.add_event', ['ngRoute'])
+angular.module('myApp.addEvent', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/add_event', {

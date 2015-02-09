@@ -9,7 +9,7 @@
                 <div form-group>
                     <input id="event-name" class="form-control" ng-model="event.name">
                     <label>Dinner Group Host</label>
-                    <input id="host-name" class="form-control" ng-model="host.name">
+                    <input id="host-name" class="form-control" ng-model="event.host">
                     <label>Location</label>
                     <textarea class="form-control" ng-model="event.location"></textarea>
                     <label class="">Time</label>
@@ -21,14 +21,9 @@
                     <button class="btn btn-info btn-xs" ng-click="addMemberToEvent(memberName)"><span class="glyphicon glyphicon-plus"></span>Add Member</button>
                     <label>Comments About Event:</label>
                     <textarea class="form-control" ng-model="event.comments"></textarea>
-                    <button class="btn btn-success btn-md" ng-click="addEvent()"><span class="glyphicon glyphicon-cloud-upload"></span>Save Recipe</button>
+                    <button class="btn btn-success btn-md" ng-click="addEvent()"><span class="glyphicon glyphicon-cloud-upload"></span>Add Event</button>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-
-
-
-
