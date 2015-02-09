@@ -1,18 +1,6 @@
-<head>
-
-</head>
-
-<body>
-<br>
-<br>
-<div>
-    <ul>
-        <li ng-repeat="event in events">{{ event.name }}</li>
-    </ul>
+<div class="col-xs-2" ng-repeat="event in events">
+    <div class="event-card" style="padding-bottom: 15px;">
+        <h3>{{event.host}}</h3>
+        <p>{{ event.description }}</p>
+    </div>
 </div>
-</body>
-
-
-
-
-

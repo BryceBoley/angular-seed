@@ -9,8 +9,8 @@ angular.module('myApp.members', ['ngRoute'])
         });
     }])
 
-    .controller('RecipesCtrl', ['$scope', 'Restangular', function($scope, Restangular) {
-        Restangular.all('members').getList().then(function(members) {
-            $scope.members = members;
+    .controller('MembersCtrl', ['$scope', 'Restangular', function ($scope, Restangular) {
+        Restangular.all('members').getList().then(function (data) {
+            $scope.members = data;
         });
     }]);
