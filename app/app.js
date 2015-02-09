@@ -13,5 +13,5 @@ angular.module('myApp', [
     .config(['$routeProvider', 'RestangularProvider', function ($routeProvider, RestangularProvider) {
         $routeProvider.otherwise({redirectTo: '/events'});
 
-        RestangularProvider.setBaseUrl('http://localhost:8001');
+        RestangularProvider.setBaseUrl('http://localhost:8002');
     }]);
