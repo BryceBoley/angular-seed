@@ -16,7 +16,7 @@ angular.module('myApp.addMember', ['ngRoute'])
 
             var newMember = {
                 name: $scope.newMemberName
-            }
+            };
 
             Restangular.all('add_member').customPOST(newMember).then(function () {
                     alert("Your member was successfully added");
