@@ -7,14 +7,14 @@
 <p>This is the partial for view 2.</p>
 
 
-
-
-
-
+<div class="row">
+    <div class="col-sm-4 col-md-4">
+        <div class="thumbnail">
+            <div class="caption">
                 <h3 align="top">Create A Dinner Group!</h3>
-
-                    <label>Date<label>
-
+                <div form-group>
+                    <label>Date</label>
+                    <quick-datepicker ng-model='myDate' date-format='EEEE, MMMM d, yyyy' placeholder='Pick a Date' disable-timepicker='true'></quick-datepicker>
                     <label>Event Name</label>
                     <input id="event-name" class="form-control" ng-model="event.name">
                     <label>Location</label>
@@ -34,4 +34,9 @@
                     <textarea class="form-control" ng-model="event.messages"></textarea>
                     <button class="btn btn-success btn-md" ng-click="addEvent()"><span class="glyphicon glyphicon-cloud-upload"></span>Save Event</button>
 
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
