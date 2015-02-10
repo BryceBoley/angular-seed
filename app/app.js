@@ -11,7 +11,7 @@ angular.module('myApp', [
     'myApp.editMember',
     'myApp.version',
     'restangular',
-    'ui.calendar',
+    'ui.calendar'
 
 ])
     .config(['$routeProvider', 'RestangularProvider', function ($routeProvider, RestangularProvider) {
