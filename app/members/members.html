@@ -1,15 +1,18 @@
-<p>This is the partial for view 3.</p>
-
-
-
 <div class="col-xs-2" ng-repeat="member in members">
     <div class="member-card" style="padding-bottom: 15px;">
         <h3>{{member.name}}</h3>
+        <ul>
+            <li>{{ member.phone_number }}</li>
+            <li>{{ member.street }}</li>
+            <li>{{ member.city }}</li>
+            <li>{{ member.state }}</li>
+            <li>{{ member.food_allergies }}</li>
+        </ul>
     </div>
 </div>
 
 
-<!--<textarea class="form-control" ng-model="add_member"></textarea><button class="btn btn-success btn-md" ng-click="addMember()"><span class="glyphicon glyphicon"></span>Add Member</button>
+
 
 
 

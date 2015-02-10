@@ -10,21 +10,6 @@ angular.module('myApp.addEvent', ['ngRoute'])
 }])
 
   .controller('AddEventCtrl', ['$scope', 'Restangular', '$location', function ($scope, Restangular, $location) {
-        // Initialize an empty event object with an empty members list inside.
-
-        $scope.event = {
-            members: []
-        };
-
-
-        // Add the members to the event object we're building
-        $scope.addMemberToEvent = function(memberName) {
-            var member = {name: memberName};
-            $scope.event.members.push(member);
-            $scope.memberName = '';
-
-        };
-
 
         // Add a new event, alert the user when it's been created or when there was a problem.
         $scope.addEvent = function () {
@@ -34,5 +19,6 @@ angular.module('myApp.addEvent', ['ngRoute'])
                 },
                 function () {
                     alert("There was a problem creating your event. Please try again.")
-                })}
+                })
+        };
     }]);

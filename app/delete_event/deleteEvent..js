@@ -13,23 +13,23 @@ angular.module('myApp.deleteEvent', ['ngRoute'])
 
         $scope.eventId = $routeParams.eventId;
 
-        Restangular.one('event', $scope.recipeId).customGET().then(function (data) {
-            $scope.recipe = data;
+        Restangular.one('event', $scope.eventId).customGET().then(function (data) {
+            $scope.event = data;
 
 
         });
 
 
-        $scope.deleteRecipe = function () {
-            var confirmation = confirm('Are you sure you want to delete this recipe? This cannot be undone');
+        $scope.deleteEvent = function () {
+            var confirmation = confirm('Are you sure you want to delete this event? This cannot be undone');
 
             if (confirmation) {
-                Restangular.one('recipes', $scope.recipeId).customDELETE().then(function () {
-                        alert('Your recipe was successfully deleted!');
-                        $location.path('/recipes');
+                Restangular.one('events', $scope.eventId).customDELETE().then(function () {
+                        alert('Your event was successfully deleted!');
+                        $location.path('/event');
                     },
                     function () {
-                        alert('There was a problem deleting your recipe')
+                        alert('There was a problem deleting your event')
                     })
             }
         }
