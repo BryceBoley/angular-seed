@@ -52,7 +52,7 @@ gulp.task('webserver', function() {
         .pipe(webserver({
             livereload: true,
             open: true,
-            port: 8002
+            port: 8000
             }));
 });
 
