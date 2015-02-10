@@ -1,76 +1,62 @@
-#container{
-  width: 960px;
-  margin: 0px auto;
-}
-
-#left-column{
-  width: 700px;
-  float: left;
-  background: blue;
-}
-
-#right-column{
-  width: 260px;
-  float: left;
-  background: orange;
-}
-
-@media screen and (max-width: 959px){
-
-}
-
 nav ul {
   list-style: none;
   overflow: hidden;
 
-  position: fixed; /*relative*/
+  position: fixed;
   padding: 0px;
-  margin: 0;
   text-transform: uppercase;
-  width: 75%;
+  background-color: #c8def4;
+  width: 100%;
+  margin: 0px 0;
   font-size: xx-large;
   font-weight: bolder;
-  text-align: center;
-
 }
 
-nav li {
+nav ul li {
   float: left;
   /*width should change for how many buttons we have. If we have 5, it should be 20%. If we have 3 it should be 33% ect*/
-  width: 23%;
-  margin: 10px;
+  width: 25%;
+  margin: 0px;
   padding: 0px;
-  display: block;
-
-}
-
-a {
-  text-align: center;
-  padding: 10px;
-  border-radius: 200px;
   display: inline-block;
-
 }
 
 nav ul li a {
-  color: #478fa0;
-  text-decoration: none;
-  font-family: lato, arial, sans-serif;
+  text-align: center;
+  margin: 0px;
+  display: block;
+  width: 100%;
+  background-color: #cfe5fb;
+
 }
 
-nav ul li a:hover {
-    text-decoration: none;
-    background-color: #478fa0;
-    color: white;
-}
+nav ul li a,
 
 nav ul li a:active {
-  /*background-color: #478fa0;*/
+  color: #ffffff;
   text-decoration: none;
-  list-style-type: none;
+}
+
+nav ul li a:hover,
+
+<<<<<<< Updated upstream
+nav ul li a:active {
+  background-color: #478fa0;
 }
 
 
+||||||| merged common ancestors
+
+
+
+
+
+
+
+
+
+=======
+>>>>>>> Stashed changes
 table, td, th {
   border: 1px solid dimgray;
   border-collapse: collapse;
