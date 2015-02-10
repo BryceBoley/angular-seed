@@ -8,6 +8,7 @@ angular.module('myApp', [
     'myApp.editEvent',
     'myApp.members',
     'myApp.addMember',
+    'myApp.editMember',
     'myApp.version',
     'restangular'
 ])
