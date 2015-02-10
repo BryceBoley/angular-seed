@@ -44,7 +44,8 @@ nav ul {
     list-style: none;
     overflow: hidden;
     position: fixed; /*relative*/
-    margin: 0px;
+    padding: 10px;
+    margin: 0px 87px;
     width: 100%;
     font-size: xx-large;
     text-align: center;
@@ -53,9 +54,6 @@ nav ul {
 
 nav li {
     float: left;
-    width should change for how many buttons we have. If we have 5, it should be 20%. If we have 3 it should be 33% ect
-    width: 100%;
-    margin: 0px;
     padding: 0px;
     display: block;
 }
@@ -63,9 +61,10 @@ nav li {
 a {
     width: 100%
     text-align: center;
-    padding: 10px;
+    /*padding: 10px;*/
     border-radius: 200px;
     display: inline-block;
+    margin: 0px 25px;
 }
 
 /*
