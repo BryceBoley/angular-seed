@@ -1,9 +1,15 @@
 <p>This is the partial for view 3.</p>
 
 
-<div class="col-sm-4" ng-repeat="member in members | filter:query | orderBy:orderProp">
+
+<div class="col-xs-2" ng-repeat="member in members">
     <div class="member-card" style="padding-bottom: 15px;">
         <h3>{{member.name}}</h3>
-        <a href="#/members/{{recipe.id}}"><img src="{{member.photo}}" alt="no photo"></a>
     </div>
 </div>
+
+
+<!--<textarea class="form-control" ng-model="add_member"></textarea><button class="btn btn-success btn-md" ng-click="addMember()"><span class="glyphicon glyphicon"></span>Add Member</button>
+
+
+

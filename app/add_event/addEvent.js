@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.add_event', ['ngRoute'])
+angular.module('myApp.addEvent', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/add_event', {
@@ -12,11 +12,10 @@ angular.module('myApp.add_event', ['ngRoute'])
   .controller('AddEventCtrl', ['$scope', 'Restangular', '$location', function ($scope, Restangular, $location) {
         // Initialize an empty event object with an empty members list inside.
 
-
         $scope.event = {
             members: []
-
         };
+
 
         // Add the members to the event object we're building
         $scope.addMemberToEvent = function(memberName) {
