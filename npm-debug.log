@@ -1,7 +1,11 @@
 0 info it worked if it ends with ok
 1 verbose cli [ 'node', '/usr/local/bin/npm', 'start' ]
 2 info using npm@1.4.28
+<<<<<<< HEAD
 3 info using node@v0.10.33
+=======
+3 info using node@v0.10.35
+>>>>>>> eventmember
 4 verbose run-script [ 'prestart', 'start', 'poststart' ]
 5 info prestart angular-seed@0.0.0
 6 verbose unsafe-perm in lifecycle true
@@ -20,8 +24,13 @@
 11 error There is likely additional logging output above.
 12 error System Darwin 14.1.0
 13 error command "node" "/usr/local/bin/npm" "start"
+<<<<<<< HEAD
 14 error cwd /Users/macuser/dev/dinner/frontend
 15 error node -v v0.10.33
+=======
+14 error cwd /Users/simplymac/PycharmProjects/dinner_group/frontend
+15 error node -v v0.10.35
+>>>>>>> eventmember
 16 error npm -v 1.4.28
 17 error code ELIFECYCLE
 18 verbose exit [ 1, true ]

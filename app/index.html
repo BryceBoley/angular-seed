@@ -17,10 +17,15 @@
 
   <link rel="stylesheet" href="app.css">
   <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
-
-
 </head>
 <body>
+
+  <div class="menu">
+      <a href="#/events">Events</a>
+      <a href="#/add_event">Add Event</a>
+      <a href="#/members">Members</a>
+      <a href="#/add_member">Add Members</a>
+  </div>
 
 <header>
     <nav>
@@ -37,7 +42,6 @@
   <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
-
 
   <div ng-view></div>
 
@@ -64,8 +68,10 @@
   <!--<script src="events/calendar.js"></script>-->
   <script src="events/events.js"></script>
   <script src="add_event/addEvent.js"></script>
+  <script src="edit_event/editEvent.js"></script>
   <script src="members/members.js"></script>
   <script src="add_member/addMember.js"></script>
+  <script src="edit_member/editMember.js"></script>
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>
   <script src="components/version/interpolate-filter.js"></script>
