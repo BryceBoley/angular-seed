@@ -3,7 +3,6 @@ body {
 }
 
 
-
 /*
  * Media Queries
  */
@@ -27,6 +26,18 @@ body {
     }
 }
 
+
+
+/*
+ * spaces ng-view data from navbar
+ */
+
+.extra-space {
+    margin-top: 25px;
+}
+
+
+
 /*
  * Navbar responsive design
  */
@@ -39,6 +50,7 @@ header > div {
     border-radius: 1px;
     border-color: lightgrey;
 }
+
 
 nav ul {
     list-style: none;
@@ -64,8 +76,10 @@ a {
     /*padding: 10px;*/
     border-radius: 200px;
     display: inline-block;
-    margin: 0px 25px;
+    margin: 10px 25px;
 }
+
+
 
 /*
  * Navbar effects
