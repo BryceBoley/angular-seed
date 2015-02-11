@@ -2,6 +2,13 @@ body {
     padding-top: 70px;
 }
 
+/*
+ * spaces ng-view data from navbar
+ */
+
+.extra-space {
+    margin-top: 30px;
+}
 
 
 /*
@@ -26,17 +33,6 @@ body {
         background: orange;
     }
 }
-
-
-
-/*
- * spaces ng-view data from navbar
- */
-
-.extra-space {
-    margin-top: 30px;
-}
-
 
 
 /*

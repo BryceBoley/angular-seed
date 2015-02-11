@@ -17,6 +17,16 @@
     <!--</ul>-->
 <!--</div>-->
 
-<div class="col-md-10 col-md-offset-1">
-    <div ui-calendar ng-model="eventSources"></div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2">
+            <div ng-repeat="event in events">
+                <input ng-model="event.title"/>
+            </div>
+        </div>
+
+        <div class="col-md-9">
+            <div ui-calendar="uiConfig.calendar" ng-model="eventSources"></div>
+        </div>
+    </div>
 </div>
