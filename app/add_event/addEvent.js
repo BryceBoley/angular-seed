@@ -13,7 +13,7 @@ angular.module('myApp.addEvent', ['ngRoute'])
 
         // Add a new event, alert the user when it's been created or when there was a problem.
         $scope.addEvent = function () {
-            Restangular.all('add_event').customPOST($scope.event).then(function () {
+            Restangular.all('events/').customPOST($scope.event).then(function () {
                     alert("Your event was successfully created");
                     $location.path('/events');
                 },
