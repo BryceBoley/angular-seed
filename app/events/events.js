@@ -23,22 +23,6 @@ angular.module('myApp.events', ['ngRoute'])
         $scope.events = [];
 
 
-        $scope.uiConfig = {
-            calendar: {
-                height: 450,
-                editable: true,
-                header: {
-                    left: 'title',
-                    center: '',
-                    right: 'today prev,next'
-                },
-                eventClick: $scope.alertOnEventClick,
-                eventDrop: $scope.alertOnDrop,
-                eventResize: $scope.alertOnResize,
-                eventRender: $scope.eventRender
-            }
-        };
-
         var date = new Date();
         var d = date.getDate();
         var m = date.getMonth();
@@ -107,20 +91,27 @@ angular.module('myApp.events', ['ngRoute'])
             $scope.alertMessage = (date.title + ' was clicked ');
         };
         /* alert on Drop */
-        //$scope.alertOnDrop = function (event, delta, revertFunc, jsEvent, ui, view) {
-        //    $scope.alertMessage = ('Event Droped to make dayDelta ' + delta);
-        //    //save new date to database
-        //    Restangular.all('events/').customPUT($scope.events).then(function(){
-        //        alert("Event date was changed successfully!");
-        //        $location.path('/events');
-        //    },
-        //    function(){
-        //        alert("There was a problem")
-        //})
-        //};
         $scope.alertOnDrop = function (event, delta, revertFunc, jsEvent, ui, view) {
-            $scope.alertMessage = ('Event Droped to make dayDelta ' + delta);
+            //$scope.alertMessage = ('Event Droped to make dayDelta ' + delta);
+            //save new date to database
+
+            var eventCopy = angular.copy(event);
+
+            var day = eventCopy.start.getDate();
+            var month = eventCopy.start.getMonth() + 1;
+            var year = eventCopy.start.getFullYear();
+
+            eventCopy.start = year + '-' + month + '-' + day
+
+            Restangular.all('events/' + event.id).customPUT(eventCopy).then(function () {
+                    //alert("Event date was changed successfully!");
+                    $location.path('/events');
+                },
+                function () {
+                    //alert("There was a problem")
+                })
         };
+
         /* alert on Resize */
         $scope.alertOnResize = function (event, delta, revertFunc, jsEvent, ui, view) {
             $scope.alertMessage = ('Event Resized to make dayDelta ' + delta);
@@ -170,6 +161,21 @@ angular.module('myApp.events', ['ngRoute'])
             $compile(element)($scope);
         };
         /* config object */
+        $scope.uiConfig = {
+            calendar: {
+                height: 450,
+                editable: true,
+                header: {
+                    left: 'title',
+                    center: '',
+                    right: 'today prev,next'
+                },
+                eventClick: $scope.alertOnEventClick,
+                eventDrop: $scope.alertOnDrop,
+                eventResize: $scope.alertOnResize,
+                eventRender: $scope.eventRender
+            }
+        };
 
 
         /* event sources array*/
