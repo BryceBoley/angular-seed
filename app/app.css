@@ -3,6 +3,7 @@ body {
 }
 
 
+
 /*
  * Media Queries
  */
@@ -57,7 +58,7 @@ nav ul {
     overflow: hidden;
     position: fixed; /*relative*/
     padding: 10px;
-    margin: 0px 88px;
+    margin: 0px 30px;
     width: 100%;
     font-size: xx-large;
     text-align: center;
@@ -73,7 +74,7 @@ nav li {
 a {
     width: 100%
     text-align: center;
-    /*padding: 10px;*/
+    padding: 7px;
     border-radius: 200px;
     display: inline-block;
     margin: 10px 25px;

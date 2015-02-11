@@ -41,6 +41,7 @@
 
     <div class="extra-space" ng-view></div>
 
+
     <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
     <script type="text/javascript" src="bower_components/jquery-ui/ui/jquery-ui.js"></script>
     <script src="bower_components/angular/angular.js"></script>
@@ -57,8 +58,13 @@
     <script src="add_event/addEvent.js"></script>
     <script src="members/members.js"></script>
     <script src="add_member/addMember.js"></script>
+<<<<<<< Updated upstream
     <script src="edit_event/editEvent.js"></script>
     <script src="edit_member/editMember.js"></script>
+||||||| merged common ancestors
+=======
+    <script src="edit_member/editMember.js"></script>
+>>>>>>> Stashed changes
     <script src="components/version/version.js"></script>
     <script src="components/version/version-directive.js"></script>
     <script src="components/version/interpolate-filter.js"></script>
