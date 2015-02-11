@@ -67,6 +67,11 @@ nav ul {
 
 nav li {
     float: left;
+<<<<<<< HEAD
+
+    margin: 0px;
+=======
+>>>>>>> be54086b00f5dd10f8bc90c8100cf5560dbe811d
     padding: 0px;
     display: block;
 }

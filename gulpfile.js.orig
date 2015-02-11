@@ -52,7 +52,13 @@ gulp.task('webserver', function() {
         .pipe(webserver({
             livereload: true,
             open: true,
+<<<<<<< Updated upstream
             port: 8000
+||||||| merged common ancestors
+            port: 8080
+=======
+            port: 8002
+>>>>>>> Stashed changes
             }));
 });
 
