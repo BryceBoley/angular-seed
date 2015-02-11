@@ -3,7 +3,7 @@
 angular.module('myApp.addMember', ['ngRoute'])
 
     .config(['$routeProvider', function ($routeProvider) {
-        $routeProvider.when('/add_member', {
+        $routeProvider.when('/add-member', {
             templateUrl: 'add_member/add_member.html',
             controller: 'AddMemberCtrl'
         });
@@ -13,7 +13,7 @@ angular.module('myApp.addMember', ['ngRoute'])
 
         // Add a new event, alert the user when it's been created or when there was a problem.
         $scope.addMember = function () {
-            Restangular.all('add_member').customPOST($scope.member).then(function () {
+            Restangular.all('members/').customPOST($scope.member).then(function () {
                     alert("Your member was successfully added");
                     $location.path('/members');
                 },

@@ -3,6 +3,7 @@ body {
 }
 
 
+
 /*
  * Media Queries
  */
@@ -33,7 +34,7 @@ body {
  */
 
 .extra-space {
-    margin-top: 25px;
+    margin-top: 30px;
 }
 
 
@@ -56,15 +57,8 @@ nav ul {
     list-style: none;
     overflow: hidden;
     position: fixed; /*relative*/
-<<<<<<< Updated upstream
-    padding: 10px;
-    margin: 0px 88px;
-||||||| merged common ancestors
-    margin: 0px;
-=======
     padding: 10px;
     margin: 0px 30px;
->>>>>>> Stashed changes
     width: 100%;
     font-size: xx-large;
     text-align: center;
@@ -73,6 +67,11 @@ nav ul {
 
 nav li {
     float: left;
+<<<<<<< HEAD
+
+    margin: 0px;
+=======
+>>>>>>> be54086b00f5dd10f8bc90c8100cf5560dbe811d
     padding: 0px;
     display: block;
 }
@@ -83,12 +82,7 @@ a {
     padding: 7px;
     border-radius: 200px;
     display: inline-block;
-<<<<<<< Updated upstream
     margin: 10px 25px;
-||||||| merged common ancestors
-=======
-    margin: 0px 20px;
->>>>>>> Stashed changes
 }
 
 
