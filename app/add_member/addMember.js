@@ -3,7 +3,7 @@
 angular.module('myApp.addMember', ['ngRoute'])
 
     .config(['$routeProvider', function ($routeProvider) {
-        $routeProvider.when('/add_member', {
+        $routeProvider.when('/add-member', {
             templateUrl: 'add_member/add_member.html',
             controller: 'AddMemberCtrl'
         });

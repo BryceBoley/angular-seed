@@ -3,7 +3,7 @@
 angular.module('myApp.addEvent', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/add_event', {
+  $routeProvider.when('/add-event', {
     templateUrl: 'add_event/add_event.html',
     controller: 'AddEventCtrl'
   });
