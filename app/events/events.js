@@ -86,10 +86,6 @@ angular.module('myApp.events', ['ngRoute'])
                 }
             ]
         };
-        /* alert on eventClick */
-        $scope.alertOnEventClick = function (date, jsEvent, view) {
-            $scope.alertMessage = (date.title + ' was clicked ');
-        };
         /* alert on Drop */
         $scope.alertOnDrop = function (event, delta, revertFunc, jsEvent, ui, view) {
             //$scope.alertMessage = ('Event Droped to make dayDelta ' + delta);
@@ -112,6 +108,33 @@ angular.module('myApp.events', ['ngRoute'])
                 })
         };
 
+        //change title
+
+        $scope.alertOnEventClick = function (event, delta, date, jsEvent, view) {
+
+
+            var newTitle = prompt('new title');
+
+            var eventCopy = angular.copy(event);
+
+
+
+            eventCopy.title = newTitle;
+
+            //eventCopy.title = newTitle
+
+            Restangular.all('events/' + event.id).customPUT(eventCopy).then(function () {
+                    alert("Event title was changed successfully!");
+                    $location.path('/events' + event.id);
+                },
+                function () {
+                    alert("There was a problem")
+                })
+
+
+
+
+        };
         /* alert on Resize */
         $scope.alertOnResize = function (event, delta, revertFunc, jsEvent, ui, view) {
             $scope.alertMessage = ('Event Resized to make dayDelta ' + delta);
@@ -131,10 +154,21 @@ angular.module('myApp.events', ['ngRoute'])
         };
         /* add custom event*/
         $scope.addEvent = function () {
+            var day = prompt("which day would you like the event to be on?");
+
+            if (day === parseInt(day, 10) && day <32) {
+                var newTitle = prompt("what would you like as your new title");
+            }else{
+                alert("day needs to be an integer and a date on the calendar");
+                return
+
+            }
+
             $scope.events.push({
-                title: 'Erics new Event!',
-                start: new Date(y, m, 28),
-                end: new Date(y, m, 28),
+
+                title: newTitle,
+                start: new Date(y, m, day),
+                end: new Date(y, m, day),
                 className: ['openSesame']
             });
         };
@@ -176,7 +210,10 @@ angular.module('myApp.events', ['ngRoute'])
                 eventRender: $scope.eventRender
             }
         };
-
+        //clicking a day to add event
+        $scope.onReportDayClick = function (event, delta, date, jsEvent, view) {
+            alert("you clicked a day")
+        }
 
         /* event sources array*/
         $scope.eventSources = [$scope.events, $scope.eventSource, $scope.eventsF];
