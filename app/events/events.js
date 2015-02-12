@@ -10,7 +10,7 @@ angular.module('myApp.events', ['ngRoute'])
     }])
 
     .controller('EventsCtrl', ['$scope', '$compile', 'uiCalendarConfig', 'Restangular', function ($scope, $compile, uiCalendarConfig, Restangular) {
-		
+
 
         $scope.eventSources = [];
         /* config object */
@@ -219,6 +219,18 @@ angular.module('myApp.events', ['ngRoute'])
             calendar: {
                 height: 600,
                 editable: true,
+                selectable: true,
+                select: function(start, end) {
+                    var title = prompt('Event Title:');
+                    var eventData;
+                    if (title) {
+                        eventData = {
+                            title: title,
+                            start: start,
+                            end: end
+                        };
+                    }
+                },
                 header: {
                     left: 'month agendaDay',
                     center: 'title',
