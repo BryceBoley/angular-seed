@@ -1,7 +1,29 @@
+<<<<<<< HEAD
 body {
     padding-top: 70px;
+=======
+nav ul {
+  list-style: none;
+  overflow: hidden;
+	z-index: 10;
+  position: fixed;
+  padding: 0px;
+  text-transform: uppercase;
+  background-color: #c8def4;
+  width: 100%;
+  margin: 0px 0;
+  font-size: xx-large;
+  font-weight: bolder;
+>>>>>>> calendar_update
 }
 
+/*
+ * spaces ng-view data from navbar
+ */
+
+.extra-space {
+    margin-top: 30px;
+}
 
 
 /*
@@ -26,17 +48,6 @@ body {
         background: orange;
     }
 }
-
-
-
-/*
- * spaces ng-view data from navbar
- */
-
-.extra-space {
-    margin-top: 30px;
-}
-
 
 
 /*
@@ -67,11 +78,6 @@ nav ul {
 
 nav li {
     float: left;
-<<<<<<< HEAD
-
-    margin: 0px;
-=======
->>>>>>> be54086b00f5dd10f8bc90c8100cf5560dbe811d
     padding: 0px;
     display: block;
 }

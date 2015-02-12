@@ -7,19 +7,41 @@
         </div>
 
         <div class="col-md-9">
+            <div class="alert-success calAlert" ng-show="alertMessage != undefined && alertMessage != ''">
+                <h4>{{alertMessage}}</h4>
+            </div>
+            <div class="btn-group">
+                <button class="btn btn-success" ng-click="addEvent('agendaDay', 'myCalendar1')">Add Event</button>
+
+            </div>
             <div ui-calendar="uiConfig.calendar" ng-model="eventSources"></div>
         </div>
     </div>
 </div>
 
+
+
+
+
 <footer>
     <div class="col-xs-2" ng-repeat="event in events">
         <div class="event-card" style="padding-bottom: 15px;">
             <h3>{{ event.when }}</h3>
+
             <p>{{ event.location }}</p>
+
             <p>{{ event.description }}</p>
+
             <p>{{ event.comments }}</p>
             <a href="#/events/{{ event.id }}">Details</a>
         </div>
     </div>
 </footer>
+
+
+</body>
+
+
+
+
+

@@ -1,24 +1,4 @@
-<header>
-    <div>
-        <div class="col-md-10 col-md-offset-1">
-            <div ui-calendar ng-model="eventSources"></div>
-        </div>
-    </div>
-</header>
-
-
 <<<<<<< HEAD
-<!--<br>-->
-<!--<br>-->
-
-<!--<div>-->
-    <!--<ul>-->
-        <!--<li ng-repeat="event in events | orderBy:'date' ">{{ event.name }} is going to be on {{ event.date |-->
-            <!--date:'fullDate'}}-->
-        <!--</li>-->
-    <!--</ul>-->
-<!--</div>-->
-
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-2">
@@ -32,22 +12,7 @@
         </div>
     </div>
 </div>
-||||||| merged common ancestors
-<!--<br>-->
-<!--<br>-->
 
-<!--<div>-->
-    <!--<ul>-->
-        <!--<li ng-repeat="event in events | orderBy:'date' ">{{ event.name }} is going to be on {{ event.date |-->
-            <!--date:'fullDate'}}-->
-        <!--</li>-->
-    <!--</ul>-->
-<!--</div>-->
-
-<div class="col-md-10 col-md-offset-1">
-    <div ui-calendar ng-model="eventSources"></div>
-</div>
-=======
 <footer>
     <div class="col-xs-2" ng-repeat="event in events">
         <div class="event-card" style="padding-bottom: 15px;">
@@ -59,4 +24,49 @@
         </div>
     </div>
 </footer>
->>>>>>> 57af497db036e2456c4ba52522af75b3bc02d620
+=======
+
+<head>
+
+</head>
+
+<body>
+<br>
+<br>
+<div>
+    <ul>
+        <li ng-repeat="event in events | orderBy:'date' ">{{ event.title }} is going to be on {{ event.start | date:'fullDate'}}</li>
+    </ul>
+</div>
+
+
+<!--<div ui-calendar="calendarOptions" ng-model="eventSources" calendar="myCalendar"></div>-->
+<div class=" col-md-10">
+
+                            <tab select="renderCalender('myCalendar1');">
+                              <tab-heading>
+                               <i class="glyphicon glyphicon-bell"></i> Calendar One
+                              </tab-heading>
+                              <div class="alert-success calAlert" ng-show="alertMessage != undefined && alertMessage != ''">
+                                <h4>{{alertMessage}}</h4>
+                              </div>
+                              <div class="btn-toolbar">
+                                <p class="pull-right lead">Calendar One View Options</p>
+                                <div class="btn-group">
+                                    <button class="btn btn-success" ng-click="addEvent('agendaDay', 'myCalendar1')">Add Event</button>
+                                    <button class="btn btn-success" ng-click="changeView('agendaWeek', 'myCalendar1')">AgendaWeek</button>
+                                    <button class="btn btn-success" ng-click="changeView('month', 'myCalendar1')">Month</button>
+                                </div>
+                              </div>
+                            <div class="calendar" ng-model="eventSources" calendar="myCalendar1" ui-calendar="uiConfig.calendar"></div>
+                           </tab>
+
+
+                    </div>
+</body>
+
+
+
+
+
+>>>>>>> calendar_update

@@ -1,12 +1,9 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>
-<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>
-<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>
-<html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<!--[if lt IE 7]>       <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>          <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>          <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->  <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,12 +12,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="bower_components/html5-boilerplate/css/normalize.css">
     <link rel="stylesheet" href="bower_components/html5-boilerplate/css/main.css">
-
     <link rel="stylesheet" href="bower_components/fullcalendar/fullcalendar.css"/>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-
     <link rel="stylesheet" href="app.css">
-
     <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
 <body>
@@ -30,46 +24,52 @@
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
     your browser</a> to improve your experience.</p>
 <![endif]-->
-||||||| merged common ancestors
-    <header>
-        <div class="container-fluid">
-            <nav class="navbar-fixed-top">
-                <ul>
-                    <li><a href="#/events">Home</a></li>
-                    <li><a href="#/events">Events</a></li>
-                    <li><a href="#/members">Members</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-=======
-
-        <div class="container-fluid">
-            <nav class="navbar-fixed-top">
-                <ul>
-                    <li><a href="#/events">Events</a></li>
-                    <li><a href="#/add-event">Add Events</a></li>
-                    <li><a href="#/members">Members</a></li>
-                    <li><a href="#/add-member">Add Members</a></li>
-                </ul>
-            </nav>
-        </div>
-
->>>>>>> 57af497db036e2456c4ba52522af75b3bc02d620
 
 <header>
     <div class="container-fluid">
         <nav class="navbar-fixed-top">
             <ul>
-                <li><a href="#/events">Home</a></li>
                 <li><a href="#/events">Events</a></li>
+                <li><a href="#/add-event">Add Events</a></li>
                 <li><a href="#/members">Members</a></li>
+                <li><a href="#/add-member">Add Members</a></li>
             </ul>
         </nav>
     </div>
 </header>
 
 <div class="extra-space" ng-view></div>
+=======
+
+<nav>
+    <ul>
+
+        <li><a href="#/events"><span class="glyphicon glyphicon-home"></span></a></li>
+        <li><a href="#/events"><span class="glyphicon glyphicon-calendar"></span></a></li>
+        <li><a href="#/add_event"><span class="glyphicon glyphicon-plus"></span></a></li>
+        <li><a href="#/members"><span class="glyphicon glyphicon-plus"></span></a></li>
+
+    </ul>
+</nav>
+
+
+
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+
+  <div ng-view></div>
+
+
+
+
+
+
+
+
+
+>>>>>>> calendar_update
 
 <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
 <script type="text/javascript" src="bower_components/jquery-ui/ui/jquery-ui.js"></script>

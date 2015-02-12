@@ -1,0 +1,26 @@
+<<<<<<< HEAD
+=======
+<p>This is the partial for view 3.</p>
+
+
+<br>
+<br>
+<br>
+>>>>>>> calendar_update
+<div class="col-xs-2" ng-repeat="member in members">
+    <div class="member-card" style="padding-bottom: 15px;">
+        <h3>{{member.name}}</h3>
+        <li>{{ member.phone_number }}</li>
+        <li>{{ member.street }}</li>
+        <li>{{ member.city }}</li>
+        <li>{{ member.state }}</li>
+        <li>{{ member.food_allergies }}</li>
+        <a href="#/members/{{ member.id }}">Details</a>
+    </div>
+</div>
+
+
+
+
+
+
