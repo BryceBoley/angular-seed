@@ -220,7 +220,7 @@ angular.module('myApp.events', ['ngRoute'])
                 selectable: true,
                 select: function (start, end) {
 
-                    var dateBounds = {start: start, end: end}
+                    var dateBounds = {start: start, end: end};
 
                     var modalInstance = $modal.open({
                         templateUrl: 'events/newEventModal.html',
