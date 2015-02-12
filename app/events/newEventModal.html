@@ -1,0 +1,26 @@
+<footer>
+    <div class="row">
+        <div>
+            <div class="thumbnail">
+                <div class="caption">
+                    <div form-group>
+                        <h3 align="top">Create A Dinner Group!</h3>
+                        Your event is from {{dateBounds.start.toString()}} to {{dateBounds.end.toString()}}
+                        <!--<label class="">Date</label>-->
+                        <!--<textarea class="form-control" ng-model="event.when"></textarea>-->
+                        <label>Title</label>
+                        <textarea class="form-control" ng-model="event.title"></textarea>
+                        <label>Location</label>
+                        <textarea class="form-control" ng-model="event.location"></textarea>
+                        <label class="form-group">Event Description</label>
+                        <textarea class="form-control" ng-model="event.description"></textarea>
+                        <label>Comments About Event:</label>
+                        <textarea class="form-control" ng-model="event.comments"></textarea>
+                        <button class="btn btn-success btn-md" ng-click="ok()"><span class="glyphicon glyphicon-cloud-upload"></span>Add Event</button>
+                        <button class="danger" ng-click="cancel()">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
