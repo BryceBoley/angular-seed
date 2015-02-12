@@ -184,7 +184,7 @@ angular.module('myApp.events', ['ngRoute'])
                 },
                 eventClick: $scope.alertOnEventClick,
                 eventDrop: $scope.alertOnDrop,
-                eventResize: $scope.alertOnResize,g
+                eventResize: $scope.alertOnResize,
                 eventRender: $scope.eventRender
             }
         };
