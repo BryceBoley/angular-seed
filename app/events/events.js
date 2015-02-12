@@ -117,8 +117,6 @@ angular.module('myApp.events', ['ngRoute'])
 
             var eventCopy = angular.copy(event);
 
-
-
             eventCopy.title = newTitle;
 
             //eventCopy.title = newTitle
@@ -156,7 +154,7 @@ angular.module('myApp.events', ['ngRoute'])
         $scope.addEvent = function () {
             var day = prompt("which day would you like the event to be on?");
 
-            if (day === parseInt(day, 10) && day <32) {
+            if (Math.floor(day) == day && $.isNumeric(day) && day <32)  {
                 var newTitle = prompt("what would you like as your new title");
             }else{
                 alert("day needs to be an integer and a date on the calendar");
@@ -164,13 +162,35 @@ angular.module('myApp.events', ['ngRoute'])
 
             }
 
-            $scope.events.push({
+            var event = {
 
                 title: newTitle,
-                start: new Date(y, m, day),
-                end: new Date(y, m, day),
-                className: ['openSesame']
-            });
+                start: new Date(y, m, day)
+                //end: new Date(y, m, day),
+                //className: ['openSesame']
+            };
+
+            $scope.events.push(event);
+
+
+            //$scope.events.push(event);
+
+            //newEvent.title =
+
+
+            var eventCopy = angular.copy(event);
+
+            eventCopy.title = newTitle;
+            eventCopy.start = y + '-' + m + '-' + day;
+
+            Restangular.one('events/').customPOST(eventCopy).then(function (postedEvent) {
+                    alert("Event title was changed successfully!");
+                    //$location.path('/events');
+                },
+                function () {
+                    alert("There was a problem")
+                })
+
         };
         /* remove event */
         $scope.remove = function (index) {
