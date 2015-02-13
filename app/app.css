@@ -1,10 +1,7 @@
 
 body {
     padding-top: 70px;
-}
-
-h2 {
-    font-family: lato;
+    /*background-color: #d3d3d3;*/
 }
 
 /*
@@ -12,9 +9,8 @@ h2 {
  */
 
 .extra-space {
-    margin-top: 30px;
+    /*margin-top: 30px;*/
 }
-
 
 
 /*
@@ -23,11 +19,6 @@ h2 {
 
 nav {
     margin: 0px;
-}
-
-header > div {
-    border-radius: 1px;
-    border-color: lightgrey;
 }
 
 
@@ -39,37 +30,24 @@ nav ul {
     padding: 0px;
     margin: 0px;
     width: 100%;
-    font-size: 30px;
+    font-size: 1.7em;
+    font-weight: lighter;
     text-align: center;
     background-color: #3A87AD; /*#fafafa*/
 }
 
-
-/*nav ul {*/
-  /*list-style: none;*/
-  /*overflow: hidden;*/
-    /*z-index: 10;*/
-  /*position: fixed;*/
-  /*padding: 0px;*/
-  /*text-transform: uppercase;*/
-  /*background-color: #;*/
-  /*width: 100%;*/
-  /*font-size: 30px;*/
-/*}*/
-
 nav li {
     float: left;
-    padding: 0px;
     display: block;
 }
 
 a {
     width: 100%
     text-align: center;
-    padding: 7px;
+    padding: 0px 15px;
     border-radius: 50px;
     display: inline-block;
-    margin: 10px 25px;
+    margin: 5px 5px;
 }
 
 
@@ -78,15 +56,15 @@ a {
  */
 
 nav ul li a {
-    color: white; /*3A87AD*/
+    color: white;
     text-decoration: none;
     font-family: lato, arial, sans-serif;
 }
 
 nav ul li a:hover {
     text-decoration: none;
-    /*background-color: #478fa0;*/
-    color: #5aa4c8;
+    /*background-color: #3A87AD;*/
+    color: #a4cde1;
 }
 
 nav ul li a:link {
