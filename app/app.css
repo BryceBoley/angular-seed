@@ -3,18 +3,8 @@ body {
     padding-top: 70px;
 }
 
-nav ul {
-  list-style: none;
-  overflow: hidden;
-	z-index: 10;
-  position: fixed;
-  padding: 0px;
-  text-transform: uppercase;
-  background-color: #c8def4;
-  width: 100%;
-  margin: 0px 0;
-  font-size: xx-large;
-  font-weight: bolder;
+h2 {
+    font-family: lato;
 }
 
 /*
@@ -25,29 +15,6 @@ nav ul {
     margin-top: 30px;
 }
 
-
-/*
- * Media Queries
- */
-
-@media screen and (max-width: 959px) {
-    #container {
-        width: 960px;
-        margin: 0 auto;
-    }
-
-    #left-column {
-        width: 700px;
-        float: left;
-        background: blue;
-    }
-
-    #right-column {
-        width: 260px;
-        float: left;
-        background: orange;
-    }
-}
 
 
 /*
@@ -67,14 +34,28 @@ header > div {
 nav ul {
     list-style: none;
     overflow: hidden;
+    z-index: 10;
     position: fixed; /*relative*/
-    padding: 10px;
-    margin: 0px 30px;
+    padding: 0px;
+    margin: 0px;
     width: 100%;
-    font-size: xx-large;
+    font-size: 30px;
     text-align: center;
-    background-color: white; /*#fafafa*/
+    background-color: #3A87AD; /*#fafafa*/
 }
+
+
+/*nav ul {*/
+  /*list-style: none;*/
+  /*overflow: hidden;*/
+    /*z-index: 10;*/
+  /*position: fixed;*/
+  /*padding: 0px;*/
+  /*text-transform: uppercase;*/
+  /*background-color: #;*/
+  /*width: 100%;*/
+  /*font-size: 30px;*/
+/*}*/
 
 nav li {
     float: left;
@@ -86,11 +67,45 @@ a {
     width: 100%
     text-align: center;
     padding: 7px;
-    border-radius: 200px;
+    border-radius: 50px;
     display: inline-block;
     margin: 10px 25px;
 }
 
+
+/*
+ * Navbar effects
+ */
+
+nav ul li a {
+    color: white; /*3A87AD*/
+    text-decoration: none;
+    font-family: lato, arial, sans-serif;
+}
+
+nav ul li a:hover {
+    text-decoration: none;
+    /*background-color: #478fa0;*/
+    color: #5aa4c8;
+}
+
+nav ul li a:link {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+nav ul li a:focus {
+    text-decoration: none;
+    list-style-type: none;
+    background-color: #3A87AD;
+    color: white;
+}
+
+
+
+/*
+ * Calendar
+ */
 
 .hero-unit {
 	position: relative;
@@ -166,57 +181,53 @@ td{
 
 /*** Calendar ***/
 
-.calAlert{
-	width: 595px; float: right; margin-bottom: 5px;
-}
+/*.calAlert{*/
+	/*width: 595px; float: right; margin-bottom: 5px;*/
+/*}*/
 
-.calXBtn{
-	float: right; margin-top: -5px; margin-right: -5px;
-}
+/*.calXBtn{*/
+	/*float: right; margin-top: -5px; margin-right: -5px;*/
+/*}*/
 
-.calWell{
-	float: left; margin-bottom: 40px;
-}
+/*.calWell{*/
+	/*float: left; margin-bottom: 40px;*/
+/*}*/
 
-.fc-event.openSesame .fc-event-skin{
-	background-color: rgb(229, 229, 11);
-	color: black;
-}
+/*.fc-event.openSesame .fc-event-skin{*/
+	/*background-color: rgb(229, 229, 11);*/
+	/*color: black;*/
+/*}*/
 
-.fc-event.customFeed .fc-event-skin{
-	background-color: rgb(132, 222, 175);
-	color: black;
-}
+/*.fc-event.customFeed .fc-event-skin{*/
+	/*background-color: rgb(132, 222, 175);*/
+	/*color: black;*/
+/*}*/
 
-.calTools{
-	margin-bottom: 10px;
-}
+/*.calTools{*/
+	/*margin-bottom: 10px;*/
+/*}*/
+
 
 
 /*
- * Navbar effects
+ * Media Queries
  */
 
-nav ul li a {
-    color: #478fa0;
-    text-decoration: none;
-    font-family: lato, arial, sans-serif;
-}
+@media screen and (max-width: 959px) {
+    #container {
+        width: 960px;
+        margin: 0 auto;
+    }
 
-nav ul li a:hover {
-    text-decoration: none;
-    /*background-color: #478fa0;*/
-    color: #67abbb;
-}
+    #left-column {
+        width: 700px;
+        float: left;
+        background: blue;
+    }
 
-nav ul li a:link {
-    text-decoration: none;
-    list-style-type: none;
-}
-
-nav ul li a:focus {
-    text-decoration: none;
-    list-style-type: none;
-    background-color: #478fa0;
-    color: white;
+    #right-column {
+        width: 260px;
+        float: left;
+        background: orange;
+    }
 }
