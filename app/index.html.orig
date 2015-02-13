@@ -15,11 +15,11 @@
     <link rel="stylesheet" href="bower_components/fullcalendar/fullcalendar.css"/>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="bower_components/angular-xeditable/dist/css/xeditable.css">
     <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
 <body>
 
-<<<<<<< HEAD
 <!--[if lt IE 7]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
     your browser</a> to improve your experience.</p>
@@ -30,7 +30,7 @@
         <nav class="navbar-fixed-top">
             <ul>
                 <li><a href="#/events">Events</a></li>
-                <li><a href="#/add-event">Add Events</a></li>
+
                 <li><a href="#/members">Members</a></li>
                 <li><a href="#/add-member">Add Members</a></li>
             </ul>
@@ -39,37 +39,6 @@
 </header>
 
 <div class="extra-space" ng-view></div>
-=======
-
-<nav>
-    <ul>
-
-        <li><a href="#/events"><span class="glyphicon glyphicon-home"></span></a></li>
-        <li><a href="#/events"><span class="glyphicon glyphicon-calendar"></span></a></li>
-        <li><a href="#/add_event"><span class="glyphicon glyphicon-plus"></span></a></li>
-        <li><a href="#/members"><span class="glyphicon glyphicon-plus"></span></a></li>
-
-    </ul>
-</nav>
-
-
-
-  <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-  <![endif]-->
-
-
-  <div ng-view></div>
-
-
-
-
-
-
-
-
-
->>>>>>> calendar_update
 
 <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
 <script type="text/javascript" src="bower_components/jquery-ui/ui/jquery-ui.js"></script>
@@ -80,13 +49,19 @@
 <script type="text/javascript" src="bower_components/fullcalendar/gcal.js"></script>
 <script type="text/javascript" src="bower_components/angular-ui-calendar/src/calendar.js"></script>
 <script src="bower_components/lodash/dist/lodash.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="bower_components/angular-xeditable/dist/js/xeditable.js"></script>
 <script src="app.js"></script>
 <!--<script src="events/calendar.js"></script>-->
 <script src="events/events.js"></script>
 <script src="add_event/addEvent.js"></script>
 <script src="members/members.js"></script>
 <script src="add_member/addMember.js"></script>
-<script src="edit_event/editEvent.js"></script>
+<<<<<<< HEAD
+<!--<script src="edit_event/editEvent.js"></script>-->
+=======
+>>>>>>> develop
 <script src="edit_member/editMember.js"></script>
 <script src="components/version/version.js"></script>
 <script src="components/version/version-directive.js"></script>
