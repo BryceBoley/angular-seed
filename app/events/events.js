@@ -118,7 +118,7 @@ angular.module('myApp.events', ['ngRoute'])
         $scope.alertOnEventClick = function (ev, jsEvent, view) {
 
             var modalInstance = $modal.open({
-                templateUrl: 'events/newEventModal.html',
+                templateUrl: 'events/editEventModal.html',
                 controller: 'EventEditCtrl',
                 //size: size,
                 resolve: {
@@ -128,22 +128,29 @@ angular.module('myApp.events', ['ngRoute'])
                 }
             });
 
-            modalInstance.result.then(function (event) {
+            modalInstance.result.then(function (deleteEvent) {
+                if (deleteEvent) { // Delete the event.
+                    Restangular.one('events', ev.id).customDELETE().then(function () {
+                            alert('Your event was successfully deleted!');
+                        },
+                        function () {
+                            alert('There was a problem deleting your event')
+                        });
 
+                    var eventIndex = $scope.events.indexOf(ev);
+                    $scope.events.splice(eventIndex, 1);
+                }
 
-                var eventCopy = angular.copy(event);
+                else { // PUT (update) the event.
 
-                var day = eventCopy.start.getDate();
-                var month = eventCopy.start.getMonth() + 1;
-                var year = eventCopy.start.getFullYear();
+                    var eventCopy = $scope.convertDate(ev);
 
-                eventCopy.start = year + '-' + month + '-' + day;
-
-                $scope.eventId = $routeParams.eventId;
-
-                Restangular.one('events', $scope.eventId).customGET().then(function (data) {
-                    $scope.event = data;
-                });
+                    Restangular.one('events', ev.id).customPUT(eventCopy).then(function () {
+                        },
+                        function () {
+                            alert('There was a problem updating your event')
+                        })
+                }
             })
         }
 
@@ -282,6 +289,18 @@ angular.module('myApp.events', ['ngRoute'])
             });
         };
 
+        $scope.convertDate = function (event) {
+            var eventCopy = angular.copy(event);
+
+            var day = eventCopy.start.getDate();
+            var month = eventCopy.start.getMonth() + 1;
+            var year = eventCopy.start.getFullYear();
+
+            eventCopy.start = year + '-' + month + '-' + day;
+
+            return eventCopy;
+        }
+
         /* config object */
         $scope.uiConfig = {
             calendar: {
@@ -322,18 +341,17 @@ angular.module('myApp.events', ['ngRoute'])
         };
     })
 
-    .controller('EventEditCtrl', function ($scope, $modalInstance, ev, Restangular) {
+    .controller('EventEditCtrl', function (Restangular, $scope, $modalInstance, ev) {
+        $scope.event = ev;
 
         $scope.deleteEvent = function () {
             var confirmation = confirm('Are you sure you want to delete this event? This cannot be undone');
             if (confirmation) {
-
-                //Restangular.one('events', $scope.eventId).customDELETE().then(function () {
-                //        alert('Your event was successfully deleted!');
-                //    },
-                //    function () {
-                //        alert('There was a problem deleting your event')
-                //    })
+                $modalInstance.close(true);
             }
-        }
+        };
+
+        $scope.editEvent = function () {
+            $modalInstance.close(false);
+        };
     });
