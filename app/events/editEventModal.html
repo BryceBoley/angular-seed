@@ -1,10 +1,31 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
+<div class="col-sm-4 col-md-4">
+    <div class="thumbnail">
+        <div class="caption">
+            <form editable-form name="editableForm"></form>
 
-</body>
-</html>
+            <div>
+                <span>title</span>
+                <span class="form-control" editable-text="event.title" ng-model="event.title">{{ event.title|| "empty" }}</span>
+            </div>
+            <div>
+                <span>time </span>
+                <span class="form-control" editable-text="event.location" ng-model="event.location">{{ event.location || "empty"  }}</span>
+            </div>
+            <div>
+                <span>comment </span>
+                <span class="form-control" editable-text="event.description" ng-model="event.description">{{ event.description || "empty"  }}</span>
+            </div>
+            <div>
+                <span>host </span>
+                <span class="form-control" editable-text="event.comment" ng-model="event.comment">{{ event.comment || "empty"  }}</span>
+            </div>
+            <br><br>
+            <button class="btn btn-danger btn-md" ng-click="deleteEvent()">Delete Event</button>
+            <button class="btn btn-success btn-md"ng-click="editEvent()">Save Event</button>
+
+
+        </div>
+        </div>
+
+    </div>
+</div>

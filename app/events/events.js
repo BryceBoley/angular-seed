@@ -9,8 +9,13 @@ angular.module('myApp.events', ['ngRoute'])
         });
     }])
 
-    .controller('EventsCtrl', ['$scope', '$compile', 'uiCalendarConfig', 'Restangular', '$modal', function ($scope, $compile, uiCalendarConfig, Restangular, $modal) {
+    .controller('EventsCtrl', ['$scope', '$compile', 'uiCalendarConfig', 'Restangular', '$modal', '$routeParams', '$location', function ($scope, $compile, uiCalendarConfig, Restangular, $modal, $routeParams, $location) {
 
+        $scope.eventId = $routeParams.eventId;
+
+        //Restangular.one('events', $scope.eventId).customGET().then(function (data) {
+        //   $scope.event = data;
+        //   });
 
         $scope.eventSources = [];
         /* config object */
@@ -56,7 +61,7 @@ angular.module('myApp.events', ['ngRoute'])
                 allDay: false,
                 className: ['customFeed']
             }];
-            callback(events);
+            //callback(events);
         };
 
         $scope.calEventsExt = {
@@ -110,27 +115,56 @@ angular.module('myApp.events', ['ngRoute'])
 
         //change title
 
-        $scope.alertOnEventClick = function (event, delta, date, jsEvent, view) {
+        $scope.alertOnEventClick = function (start, end, title) {
 
 
-            var newTitle = prompt('new title');
+            var dateBounds = {start: start, end: end};
 
-            var eventCopy = angular.copy(event);
+            var modalInstance = $modal.open({
+                templateUrl: 'events/editEventModal.html',
+                controller: 'EditEventCtrl',
+                //size: size,
+                resolve: {
+                    dateBounds: function () {
+                        return dateBounds;
+                    }
+                }
+            });
 
-            eventCopy.title = newTitle;
-
-            //eventCopy.title = newTitle
-
-            Restangular.all('events/' + event.id).customPUT(eventCopy).then(function () {
-                    alert("Event title was changed successfully!");
-                    $location.path('/events' + event.id);
-                },
-                function () {
-                    alert("There was a problem")
-                })
+            modalInstance.result.then(function (event) {
 
 
-        };
+                var eventCopy = angular.copy(event);
+
+                var day = eventCopy.start.getDate();
+                var month = eventCopy.start.getMonth() + 1;
+                var year = eventCopy.start.getFullYear();
+
+                eventCopy.start = year + '-' + month + '-' + day;
+
+                $scope.eventId = $routeParams.eventId;
+
+                Restangular.one('events', $scope.eventId).customGET().then(function (data) {
+                    $scope.event = data;
+                });
+            })
+        }
+
+
+        $scope.deleteEvent = function () {
+            var confirmation = confirm('Are you sure you want to delete this event? This cannot be undone');
+
+            if (confirmation) {
+                Restangular.one('events', $scope.eventId).customDELETE().then(function () {
+                        alert('Your event was successfully deleted!');
+                        $location.path('/events/');
+                    },
+                    function () {
+                        alert('There was a problem deleting your event')
+                    })
+            }
+        }
+
         /* alert on Resize */
         $scope.alertOnResize = function (event, delta, revertFunc, jsEvent, ui, view) {
             $scope.alertMessage = ('Event Resized to make dayDelta ' + delta);
@@ -149,47 +183,47 @@ angular.module('myApp.events', ['ngRoute'])
             }
         };
         /* add custom event*/
-        //$scope.addEvent = function () {
-        //    var day = prompt("which day would you like the event to be on?");
-        //
-        //    if (Math.floor(day) == day && $.isNumeric(day) && day <32)  {
-        //        var newTitle = prompt("what would you like as your new title");
-        //    }else{
-        //        alert("day needs to be an integer and a date on the calendar");
-        //        return
-        //
-        //    }
-        //
-        //    var event = {
-        //
-        //        title: newTitle,
-        //        start: new Date(y, m, day)
-        //        //end: new Date(y, m, day),
-        //        //className: ['openSesame']
-        //    };
-        //
-        //    $scope.events.push(event);
-        //
-        //
-        //    //$scope.events.push(event);
-        //
-        //    //newEvent.title =
-        //
-        //
-        //    var eventCopy = angular.copy(event);
-        //
-        //    eventCopy.title = newTitle;
-        //    eventCopy.start = y + '-' + m + '-' + day;
-        //
-        //    Restangular.one('events/').customPOST(eventCopy).then(function (postedEvent) {
-        //            alert("Event title was changed successfully!");
-        //            //$location.path('/events');
-        //        },
-        //        function () {
-        //            alert("There was a problem")
-        //        })
-        //
-        //};
+//$scope.addEvent = function () {
+//    var day = prompt("which day would you like the event to be on?");
+//
+//    if (Math.floor(day) == day && $.isNumeric(day) && day <32)  {
+//        var newTitle = prompt("what would you like as your new title");
+//    }else{
+//        alert("day needs to be an integer and a date on the calendar");
+//        return
+//
+//    }
+//
+//    var event = {
+//
+//        title: newTitle,
+//        start: new Date(y, m, day)
+//        //end: new Date(y, m, day),
+//        //className: ['openSesame']
+//    };
+//
+//    $scope.events.push(event);
+//
+//
+//    //$scope.events.push(event);
+//
+//    //newEvent.title =
+//
+//
+//    var eventCopy = angular.copy(event);
+//
+//    eventCopy.title = newTitle;
+//    eventCopy.start = y + '-' + m + '-' + day;
+//
+//    Restangular.one('events/').customPOST(eventCopy).then(function (postedEvent) {
+//            alert("Event title was changed successfully!");
+//            //$location.path('/events');
+//        },
+//        function () {
+//            alert("There was a problem")
+//        })
+//
+//};
         /* remove event */
         $scope.remove = function (index) {
             $scope.events.splice(index, 1);
@@ -276,7 +310,8 @@ angular.module('myApp.events', ['ngRoute'])
 
     }])
 
-    .controller('NewEventCtrl', function ($scope, $modalInstance, dateBounds) {
+    .
+    controller('NewEventCtrl', function ($scope, $modalInstance, dateBounds) {
         $scope.event = {start: dateBounds.start, end: dateBounds.end};
         $scope.dateBounds = dateBounds;
 
@@ -287,5 +322,58 @@ angular.module('myApp.events', ['ngRoute'])
         $scope.cancel = function () {
             $modalInstance.dismiss('cancel');
         };
-    });
-;
+    })
+
+    .controller('EditEventCtrl', ['$scope', 'Restangular', '$routeParams', '$location', function ($scope, Restangular, $routeParams, $location) {
+
+        $scope.eventId = $routeParams.eventId;
+
+        Restangular.one('events', $scope.eventId).customGET().then(function (data) {
+            $scope.event = data;
+        });
+
+
+        $scope.deleteEvent = function () {
+            var confirmation = confirm('Are you sure you want to delete this event? This cannot be undone');
+
+            if (confirmation) {
+                console.log($scope.eventId);
+                Restangular.one('events', $scope.eventId).customDELETE().then(function () {
+                        alert('Your event was successfully deleted!');
+                        $location.path('/events/');
+                    },
+                    function () {
+                        alert('There was a problem deleting your event')
+                    })
+            }
+        }
+    }])
+
+
+//.controller('EditEventCtrl', function ($scope, $modalInstance, dateBounds) {
+//    $scope.eventId = {start: dateBounds.start, end: dateBounds.end};
+//    $scope.dateBounds = dateBounds;
+//
+//    $scope.editEvent = function () {
+//        $modalInstance.close($scope.event);
+//    };
+//
+//    $scope.cancel = function () {
+//        $modalInstance.dismiss('cancel');
+//    };
+//
+//
+//    $scope.deleteEvent = function () {
+//        var confirmation = confirm('Are you sure you want to delete this event? This cannot be undone');
+//
+//        if (confirmation) {
+//            Restangular.one('events', $scope.eventId).customDELETE().then(function () {
+//                    alert('Your event was successfully deleted!');
+//                    $location.path('/events/');
+//                },
+//                function () {
+//                    alert('There was a problem deleting your event')
+//                })
+//        }
+//    }
+//    });
