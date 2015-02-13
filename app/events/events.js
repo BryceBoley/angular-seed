@@ -152,6 +152,7 @@ angular.module('myApp.events', ['ngRoute'])
 
 
         $scope.deleteEvent = function () {
+            console.log('line 155')
             var confirmation = confirm('Are you sure you want to delete this event? This cannot be undone');
 
             if (confirmation) {
@@ -324,7 +325,7 @@ angular.module('myApp.events', ['ngRoute'])
         };
     })
 
-    .controller('EditEventCtrl', ['$scope', 'Restangular', '$routeParams', '$location', function ($scope, Restangular, $routeParams, $location) {
+    .controller('EditEventCtrl', function ($scope, Restangular) {
 
         $scope.eventId = $routeParams.eventId;
 
@@ -335,45 +336,14 @@ angular.module('myApp.events', ['ngRoute'])
 
         $scope.deleteEvent = function () {
             var confirmation = confirm('Are you sure you want to delete this event? This cannot be undone');
-
             if (confirmation) {
-                console.log($scope.eventId);
+
                 Restangular.one('events', $scope.eventId).customDELETE().then(function () {
                         alert('Your event was successfully deleted!');
-                        $location.path('/events/');
                     },
                     function () {
                         alert('There was a problem deleting your event')
                     })
             }
         }
-    }])
-
-
-//.controller('EditEventCtrl', function ($scope, $modalInstance, dateBounds) {
-//    $scope.eventId = {start: dateBounds.start, end: dateBounds.end};
-//    $scope.dateBounds = dateBounds;
-//
-//    $scope.editEvent = function () {
-//        $modalInstance.close($scope.event);
-//    };
-//
-//    $scope.cancel = function () {
-//        $modalInstance.dismiss('cancel');
-//    };
-//
-//
-//    $scope.deleteEvent = function () {
-//        var confirmation = confirm('Are you sure you want to delete this event? This cannot be undone');
-//
-//        if (confirmation) {
-//            Restangular.one('events', $scope.eventId).customDELETE().then(function () {
-//                    alert('Your event was successfully deleted!');
-//                    $location.path('/events/');
-//                },
-//                function () {
-//                    alert('There was a problem deleting your event')
-//                })
-//        }
-//    }
-//    });
+    });

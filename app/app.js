@@ -5,7 +5,7 @@ angular.module('myApp', [
     'ngRoute',
     'myApp.events',
     'myApp.addEvent',
-    'myApp.editEvent',
+    //'myApp.editEvent',
     'myApp.members',
     'myApp.addMember',
     'myApp.editMember',
