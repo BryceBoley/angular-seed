@@ -1,20 +1,13 @@
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-2">
-            <div ng-repeat="event in events">
-                <input ng-model="event.title"/>
-            </div>
-        </div>
 
-        <div class="col-md-9">
-            <div class="alert-success calAlert" ng-show="alertMessage != undefined && alertMessage != ''">
-                <h4>{{alertMessage}}</h4>
-            </div>
-            <div class="btn-group">
-                <button class="btn btn-success" ng-click="addEvent('agendaDay', 'myCalendar1')">Quick Add</button>
-
-            </div>
-            <div ui-calendar="uiConfig.calendar" ng-model="eventSources"></div>
+<div class = "container-fluid">
+    <div class="col-md-9" o>
+        <div class="alert-success calAlert" ng-show="alertMessage != undefined && alertMessage != ''">
+            <h4>{{alertMessage}}</h4>
         </div>
+        <div class="btn-group">
+            <button class="btn btn-success" ng-click="addEvent('agendaDay', 'myCalendar1')">Quick Add</button>
+
+        </div>
+        <div ui-calendar="uiConfig.calendar" ng-model="eventSources"></div>
     </div>
 </div>

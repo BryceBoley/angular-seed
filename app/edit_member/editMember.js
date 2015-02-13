@@ -30,5 +30,21 @@ angular.module('myApp.editMember', ['ngRoute'])
                         alert('There was a problem deleting your member')
                     })
             }
+        };
+
+        $scope.editMember = function () {
+
+
+
+            Restangular.one('members', $scope.memberId).customPUT($scope.member).then(function() {
+                    $location.path('/members');
+                    alert('Member was successfully updated!')
+                },
+                function () {
+                    alert('There was a problem updating your event')
+                })
+
+
+
         }
     }]);

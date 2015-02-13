@@ -1,20 +1,21 @@
-<div class="row">
-    <div class="col-sm-2 col-md-2">
-        <div class="thumbnail">
-            <img src="..." alt="...">
-            <div class="caption">
-                <div class="member-card" style="padding-bottom: 15px;">
-                    <div ng-repeat="member in members">
+<div class = "container-fluid">
+    <div class="row">
+        <div class="col-sm-2 col-md-2 offset= -1">
+            <div class="thumbnail">
+                <img src="..." alt="...">
+                <div class="caption">
+                    <div class="member-card" style="padding-bottom: 110px;">
+                        <div ng-repeat="member in members">
                             <h3>{{member.name}}</h3>
-                            <a href="#/members/{{ member.id }}" class="btn btn-primary" role="button">Details</a>
-                            <a href="#/add-member" class="btn btn-primary" role="button">Add Member</a></p>
+                            <a href="#/members/{{ member.id }}" class="btn btn-primary btn-xs" role="button">INFO</a>
+                            <a href="#/add-member" class="btn btn-primary btn-xs" role="button">ADD</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
 
 
 
