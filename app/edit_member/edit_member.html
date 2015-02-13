@@ -1,15 +1,42 @@
-<div>
-    <h3>{{ member.name }}</h3>
-    <p>{{ member.phone_number }}</p>
-    <p>{{ member.street }}</p>
-    <p>{{ member.city }}</p>
-    <p>{{ member.state }}</p>
-    <p>{{ member.allergy }}</p>
-    <button ng-click="deleteMember()">Delete Member</button>
+
+<div class="col-sm-4 col-md-4">
+    <div class="thumbnail">
+        <div class="caption">
+            <form editable-form name="editableForm"></form>
+
+            <div>
+                <span>title</span>
+                <span class="form-control" editable-text="member.name" ng-model="member.name">{{ member.name || "empty" }}</span>
+            </div>
+            <div>
+                <span>title</span>
+                <span class="form-control" editable-text="member.phone_number" ng-model="member.phone_number">{{ member.phone_number || "empty" }}</span>
+            </div>
+            <div>
+                <span>title</span>
+                <span class="form-control" editable-text="member.street" ng-model="member.street">{{ member.street || "empty" }}</span>
+            </div>
+            <div>
+                <span>time </span>
+                <span class="form-control" editable-text="member.city" ng-model="member.city">{{ member.city || "empty"  }}</span>
+            </div>
+            <div>
+                <span>comment </span>
+                <span class="form-control" editable-text="member.state" ng-model="member.state">{{ member.state || "empty"  }}</span>
+            </div>
+            <div>
+                <span>host </span>
+                <span class="form-control" editable-text="member.allergy" ng-model="member.allergy">{{ member.allergy || "empty"  }}</span>
+            </div>
+            <br><br>
+            <button class="btn btn-success btn-xs"ng-click="editMember()">Update Member</button>
+            <button class="btn btn-danger btn-xs"ng-click="deleteMember()">Delete Member</button>
+
+        </div>
+        </div>
+
+    </div>
 </div>
-
-
-
 
 
 
