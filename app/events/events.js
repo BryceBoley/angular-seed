@@ -115,18 +115,15 @@ angular.module('myApp.events', ['ngRoute'])
 
         //change title
 
-        $scope.alertOnEventClick = function (start, end, title) {
-
-
-            var dateBounds = {start: start, end: end};
+        $scope.alertOnEventClick = function (ev, jsEvent, view) {
 
             var modalInstance = $modal.open({
-                templateUrl: 'events/editEventModal.html',
-                controller: 'EditEventCtrl',
+                templateUrl: 'events/newEventModal.html',
+                controller: 'EventEditCtrl',
                 //size: size,
                 resolve: {
-                    dateBounds: function () {
-                        return dateBounds;
+                    ev: function () {
+                        return ev;
                     }
                 }
             });
@@ -325,25 +322,18 @@ angular.module('myApp.events', ['ngRoute'])
         };
     })
 
-    .controller('EditEventCtrl', function ($scope, Restangular) {
-
-        $scope.eventId = $routeParams.eventId;
-
-        Restangular.one('events', $scope.eventId).customGET().then(function (data) {
-            $scope.event = data;
-        });
-
+    .controller('EventEditCtrl', function ($scope, $modalInstance, ev, Restangular) {
 
         $scope.deleteEvent = function () {
             var confirmation = confirm('Are you sure you want to delete this event? This cannot be undone');
             if (confirmation) {
 
-                Restangular.one('events', $scope.eventId).customDELETE().then(function () {
-                        alert('Your event was successfully deleted!');
-                    },
-                    function () {
-                        alert('There was a problem deleting your event')
-                    })
+                //Restangular.one('events', $scope.eventId).customDELETE().then(function () {
+                //        alert('Your event was successfully deleted!');
+                //    },
+                //    function () {
+                //        alert('There was a problem deleting your event')
+                //    })
             }
         }
     });
