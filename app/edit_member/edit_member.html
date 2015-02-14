@@ -1,13 +1,46 @@
-<div>
-    <h3>{{ member.name }}</h3>
-    <p>{{ member.phone_number }}</p>
-    <p>{{ member.street }}</p>
-    <p>{{ member.city }}</p>
-    <p>{{ member.state }}</p>
-    <p>{{ member.allergy }}</p>
-    <button ng-click="deleteMember()">Delete Member</button>
-</div>
 
+     <button type="button" class="btn btn-default" ng-click="editableForm.$show()" ng-show="!editableForm.$visible">
+        Edit</button>
+        <div class="col-sm-4 col-md-4">
+            <div class="thumbnail">
+                <div class="caption">
+                    <form editable-form name="editableForm"></form>
+
+                    <div>
+                        <span>Name</span>
+                        <span class="form-control" editable-text="member.name" ng-model="member.name">{{ member.name }}</span>
+                    </div>
+                    <div>
+                        <span>Phone Number</span>
+                        <span class="form-control" editable-text="member.phone_number" ng-model="member.phone_number">{{ member.phone_number }}</span>
+                    </div>
+                    <div>
+                        <span>Street</span>
+                        <span class="form-control" editable-text="member.street" ng-model="member.street">{{ member.street }}</span>
+                    </div>
+                    <div>
+                        <span>City</span>
+                        <span class="form-control" editable-text="member.city" ng-model="member.city">{{ member.city }}</span>
+                    </div>
+                    <div>
+                        <span>State</span>
+                        <span class="form-control" editable-text="member.state" ng-model="member.state">{{ member.state }}</span>
+                    </div>
+                    <div>
+                        <span>Allergy</span>
+                        <span class="form-control" editable-text="member.allergy" ng-model="member.allergy">{{ member.allergy }}</span>
+                    </div>
+                    <br><br>
+                    <span ng-show="editableForm.$visible">
+                        <button type="submit" class="btn btn-primary" ng-click = "editMember()">Save</button>
+                        <button type="button" class="btn btn-default" ng-disabled="editableForm.$waiting" ng-click="editableForm.$cancel()">
+                        Cancel
+                        </button>
+                        <button class="btn btn-danger btn-xs"ng-click="deleteMember()">Delete Member</button>
+                    </span>
+
+            </div>
+        </div>
 
 
 
