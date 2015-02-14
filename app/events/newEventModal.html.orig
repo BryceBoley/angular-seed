@@ -1,0 +1,41 @@
+<footer>
+    <div class="row">
+        <div>
+            <div class="thumbnail">
+                <div class="caption">
+                    <div form-group>
+                        <h3 align="top">Create A Dinner Group!</h3>
+<<<<<<< HEAD
+                        {{dateBounds.start.toDateString()}}
+                        <br>
+                        <!--<label class="">Date</label>-->
+                        <!--<textarea class="form-control" ng-model="event.when"></textarea>-->
+                        <label>Title</label>
+                        <textarea class="form-control" ng-model="event.title"></textarea>
+                        <label>When</label>
+                        <textarea class="form-control" ng-model="event.when"></textarea>
+                        <label class="form-group">Host</label>
+                        <textarea class="form-control" ng-model="event.host"></textarea>
+                        <label>Comments About Event:</label>
+                        <textarea class="form-control" ng-model="event.comment"></textarea>
+=======
+                        Your event is from {{dateBounds.start.toString()}} to {{dateBounds.end.toString()}}
+                        <label class="">Title</label>
+                        <textarea class="form-control" ng-model="event.title"></textarea>
+                        <label>Title</label>
+                        <textarea class="form-control" ng-model="event.start"></textarea>
+                        <label>Location</label>
+                        <textarea class="form-control" ng-model="event.comment"></textarea>
+                        <label class="form-group">Event Description</label>
+                        <textarea class="form-control" ng-model="event.host"></textarea>
+                        <label>Comments About Event:</label>
+                        <textarea class="form-control" ng-model="event.when"></textarea>
+>>>>>>> members
+                        <button class="btn btn-success btn-md" ng-click="ok()"><span class="glyphicon glyphicon-cloud-upload"></span>Add Event</button>
+                        <button class="danger" ng-click="cancel()">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
