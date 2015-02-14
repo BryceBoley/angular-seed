@@ -7,16 +7,14 @@ body {
 /*
  * spaces ng-view data from navbar
  */
-
 .extra-space {
     /*margin-top: 30px;*/
 }
 
 
 /*
- * Navbar responsive design
+ * Navbar
  */
-
 nav {
     margin: 0px;
 }
@@ -51,16 +49,16 @@ a {
 }
 
 
-/*
- * Navbar effects
- */
-
 nav ul li a {
     color: white;
     text-decoration: none;
     font-family: lato, arial, sans-serif;
 }
 
+
+/*
+ * Navbar effects
+ */
 nav ul li a:hover {
     text-decoration: none;
     /*background-color: #3A87AD;*/
@@ -80,6 +78,13 @@ nav ul li a:focus {
 }
 
 
+/*
+ * Groups page
+ */
+.boxy {
+    border: solid gray 1px;
+    border-radius: 5px;
+}
 
 /*
  * Calendar
