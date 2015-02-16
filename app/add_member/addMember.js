@@ -18,7 +18,7 @@ angular.module('myApp.addMember', ['ngRoute'])
                     $location.path('/members');
                 },
                 function () {
-                    alert("There was a problem creating your member. Please try again.")
+                    alert("Please enter member information.")
                 })
         };
     }]);
