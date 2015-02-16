@@ -4,13 +4,23 @@ body {
     /*background-color: #d3d3d3;*/
 }
 
-/*
- * spaces ng-view data from navbar
- */
-.extra-space {
-    /*margin-top: 30px;*/
+.list-header {
+	list-style-type: none;
+	font-weight: bold;
 }
 
+li {
+	list-style-type: none;
+}
+
+/*
+ * Groups page
+ */
+.boxy {
+    border: solid gray 1px;
+    border-radius: 5px;
+	padding: 15px;
+}
 
 /*
  * Navbar
@@ -77,14 +87,6 @@ nav ul li a:focus {
     color: white;
 }
 
-
-/*
- * Groups page
- */
-.boxy {
-    border: solid gray 1px;
-    border-radius: 5px;
-}
 
 /*
  * Calendar

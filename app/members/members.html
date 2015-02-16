@@ -1,12 +1,18 @@
+<a href="#/members/{{ member.id }}" class="btn btn-primary btn-xs" role="button">INFO</a>
+<a href="#/add-member" class="btn btn-primary btn-xs" role="button">ADD</a>
+
 <div class = "container-fluid">
     <div class="row">
-        <div class="col-sm-2 col-md-2 offset= -1">
-            <div class="thumbnail">
-                <img src="..." alt="...">
+       <div class="col-md-3 col-md-offset-1" ng-repeat="member in members">
+            <div class="thumbnail"
                 <div class="caption">
-                    <div class="member-card" style="padding-bottom: 110px;">
-                        <div ng-repeat="member in members">
-                            <h3>{{member.name}}</h3>
+                    <div class="member-card">
+                        <div class="boxy">
+                             <img src="..." alt="...">
+                            <li class="list-header">{{member.name}}</li>
+                            <li>{{ member.phone_number }}</li>
+                            <li>{{ member.street }}</li>
+                            <li>{{ member.city }}, {{ member.state }}</li>
                             <a href="#/members/{{ member.id }}" class="btn btn-primary btn-xs" role="button">INFO</a>
                             <a href="#/add-member" class="btn btn-primary btn-xs" role="button">ADD</a>
                         </div>
@@ -16,28 +22,5 @@
         </div>
     </div>
 </div>
-
-
-<h3>{{member.name}}</h3>
-<a href="#/members/{{ member.id }}" class="btn btn-primary btn-xs" role="button">INFO</a>
-<a href="#/add-member" class="btn btn-primary btn-xs" role="button">ADD</a>
-
-
-<div class="col-xs-2" ng-repeat="member in members">
-    <div class="member-card" style="padding-bottom: 15px;">
-        <div class="boxy">
-            <h3>{{member.name}}</h3>
-        </div>
-        <li>{{ member.phone_number }}</li>
-        <li>{{ member.street }}</li>
-        <li>{{ member.city }}</li>
-        <li>{{ member.state }}</li>
-        <li>{{ member.food_allergies }}</li>
-        <a href="#/members/{{ member.id }}">Details</a>
-	</div>
-</div>
-
-
-
 
 
