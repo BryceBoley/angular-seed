@@ -1,7 +1,6 @@
-
-     <button type="button" class="btn btn-default" ng-click="editableForm.$show()" ng-show="!editableForm.$visible">
-        Edit</button>
-        <div class="col-sm-4 col-md-4">
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4">
             <div class="thumbnail">
                 <div class="caption">
                     <form editable-form name="editableForm"></form>
@@ -31,17 +30,17 @@
                         <span class="form-control" editable-text="member.allergy" ng-model="member.allergy">{{ member.allergy }}</span>
                     </div>
                     <br><br>
-                    <span ng-show="editableForm.$visible">
-                        <button type="submit" class="btn btn-primary" ng-click = "editMember()">Save</button>
-                        <button type="button" class="btn btn-default" ng-disabled="editableForm.$waiting" ng-click="editableForm.$cancel()">
-                        Cancel
-                        </button>
-                        <button class="btn btn-danger btn-xs"ng-click="deleteMember()">Delete Member</button>
-                    </span>
-
+                    <!--<span ng-show="editableForm.$visible">-->
+                        <button type="submit" class="btn btn-success" ng-click = "editMember()">Save</button>
+                        <button type="button" class="btn btn-primary" ng-disabled="editableForm.$waiting" ng-click="editableForm.$cancel()">Cancel</button>
+                        <button type="button" class="btn btn-danger"ng-click="deleteMember()">Delete</button>
+                    <!--</span>-->
+                </div>
             </div>
         </div>
-
+    </div>
+    <!--<button type="button" class="btn btn-default" ng-click="editableForm.$show()" ng-show="!editableForm.$visible">Edit</button>   -->
+</div>
 
 
 

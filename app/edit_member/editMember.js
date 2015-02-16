@@ -19,11 +19,11 @@ angular.module('myApp.editMember', ['ngRoute'])
 
 
         $scope.deleteMember = function () {
-            var confirmation = confirm('Are you sure you want to delete this member? This cannot be undone');
+            var confirmation = confirm('Are you sure you want to delete this member? \nThis cannot be undone.');
 
             if (confirmation) {
                 Restangular.one('members', $scope.memberId).customDELETE().then(function () {
-                        alert('Your member was successfully deleted!');
+                        //alert('Your member was successfully deleted!');
                         $location.path('/members/');
                     },
                     function () {
@@ -38,7 +38,7 @@ angular.module('myApp.editMember', ['ngRoute'])
 
             Restangular.one('members', $scope.memberId).customPUT($scope.member).then(function() {
                     $location.path('/members');
-                    alert('Member was successfully updated!')
+                    alert('Information saved!')
                 },
                 function () {
                     alert('There was a problem updating your event')

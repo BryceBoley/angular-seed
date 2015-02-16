@@ -1,6 +1,7 @@
 
+<div class="container">
     <div class="row">
-        <div class="col-sm-4 col-md-4">
+        <div class="col-lg-4">
             <div class="thumbnail">
                 <div class="caption">
                     <div form-group ng-model="newMemberName">
@@ -13,18 +14,19 @@
                         <textarea class="form-control" ng-model="member.street"></textarea>
                         <label class="form-group">City</label>
                         <textarea class="form-control" ng-model="member.city"></textarea>
-                        <label class="form-group">state</label>
+                        <label class="form-group">State</label>
                         <textarea class="form-control" ng-model="member.state"></textarea>
                         <label class="form-group">Food Allergies</label>
                         <textarea class="form-control" ng-model="member.allergy"></textarea>
                         <br>
-                        <button class="btn btn-success btn-md" ng-click="addMember()"></span>Add Member</button>
-                        <button class="btn btn-success btn-md" role="button">Cancel</button>
+                        <button class="btn btn-primary" ng-click="addMember()"></span>Add Member</button>
+                        <button class="btn btn-danger" role="button">Cancel</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
 
 
