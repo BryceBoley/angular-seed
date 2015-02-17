@@ -35,7 +35,11 @@
                         </div>
                         <div class="update-edit-spacing">
                             <span class="form-group">Zip</span>
+<<<<<<< HEAD
+                            <span class="form-control" ng-model="member.zip"></span>
+=======
                             <input type="text" class="form-control" ng-model="member.zip"></span>
+>>>>>>> a0e571520bc715516b642db15fe7504c030cc871
                         </div>
                         <div class="update-edit-spacing">
                             <span class="form-group">Food Allergies?</span>
