@@ -1,27 +1,32 @@
-<div class="col-sm-4 col-md-4">
-    <!--<div class="thumbnail">-->
-        <div class="caption">
+<div class="thumbnail">
+    <div class="caption">
+        <div class="form-group">
+             <h3 align="top">Update Your Event</h3>
+                <!--{{dateBounds.start.toDateString()}}-->
+                <br>
             <form editable-form name="editableForm"></form>
 
             <div>
-                <span>title</span>
+                <label>Whatcha cookin?</label>
                 <span class="form-control" editable-text="event.title" ng-model="event.title">{{ event.title|| "empty" }}</span>
             </div>
+            <br>
             <div>
-                <span>time </span>
+                <label>Time </label>
                 <span class="form-control" editable-text="event.when" ng-model="event.when">{{ event.when || "empty"  }}</span>
             </div>
+            <!--<div>-->
+                <!--<span>host </span>-->
+                <!--<span class="form-control" editable-text="event.host" ng-model="event.host">{{ event.host || "empty"  }}</span>-->
+            <!--</div>-->
+            <br>
             <div>
-                <span>host </span>
-                <span class="form-control" editable-text="event.host" ng-model="event.host">{{ event.host || "empty"  }}</span>
-            </div>
-            <div>
-                <span>comment </span>
+                <label>Comment </label>
                 <span class="form-control" editable-text="event.comment" ng-model="event.comment">{{ event.comment || "empty"  }}</span>
             </div>
             <br><br>
+            <button class="btn btn-primary btn-md"ng-click="editEvent()">Update Event</button>
             <button class="btn btn-danger btn-md"ng-click="deleteEvent()">Delete Event</button>
-            <button class="btn btn-success btn-md"ng-click="editEvent()">Update Event</button>
         </div>
-    <!--</div>-->
+    </div>
 </div>
