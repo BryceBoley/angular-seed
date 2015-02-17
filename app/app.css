@@ -9,22 +9,29 @@ body {
  * Groups page
  */
 
-.group-info-border {
+#group-info-border {
 	z-index: 1;
-	border: solid #1c4255 2px;
+	border: solid #95c4db 1px;
     border-radius: 15px;
-	padding: 30px;
-	min-height: 254px;
-	margin-bottom: 100px;
-	background-color: white;
+	padding-top: 7px;
+	padding-bottom: 16px;
+	padding-left: 25px;
+	margin-bottom: -55px;
 }
 
-.outer-profile {
+#group-info-text {
+	font-weight: lighter bold;
+	font-size: 1.3em;
+}
+
+.outer-profile-border {
 	z-index: 2;
+	position:relative;
 	border: solid #1c4255 1px;
     border-radius: 15px;
 	padding: 30px;
 	min-height: 254px;
+	margin-top: 2px;
 	margin-bottom: 100px;
 	background-color: white;
 }
