@@ -21,7 +21,7 @@ body {
 
 .outer-profile {
 	z-index: 2;
-	border: solid #1c4255 2px;
+	border: solid #1c4255 1px;
     border-radius: 15px;
 	padding: 30px;
 	min-height: 254px;
