@@ -9,6 +9,10 @@ body {
  * Groups page
  */
 
+.update-edit-spacing {
+	padding-top: 8px;
+}
+
 #group-info-border {
 	z-index: 1;
 	border: solid #95c4db 1px;
@@ -126,10 +130,6 @@ nav ul li a:focus {
 /*
  * Calendar
  */
-
-.update-edit-spacing {
-	padding-top: 50px;
-}
 
 .hero-unit {
 	position: relative;

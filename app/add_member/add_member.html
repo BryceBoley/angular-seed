@@ -1,29 +1,46 @@
-
 <div class="container">
     <div class="row">
         <div class="col-lg-4">
             <div class="thumbnail">
                 <div class="caption">
                     <div form-group ng-model="newMemberName">
-                        <h3 align="top">Add A New Member!</h3>
-                        <label class="form-group">First Name</label>
-                        <input type="text" class="form-control" ng-model="member.first_name">
-                        <label class="form-group">Last Name</label>
-                        <input type="text" class="form-control" ng-model="member.last_name">
-                        <label class="form-group">Phone Number</label>
-                        <input type="text" class="form-control" ng-model="member.phone_number">
-                        <label class="form-group">Street Address</label>
-                        <input type="text" class="form-control" ng-model="member.street">
-                        <label class="form-group">Apartment Number</label>
-                        <input type="text" class="form-control" ng-model="member.apartment_number" placeholder="e.g.   Apt. 8"></textarea>
-                        <label class="form-group">City</label>
-                        <input type="text" class="form-control" ng-model="member.city">
-                        <label class="form-group">State</label>
-                        <input type="text" class="form-control" ng-model="member.state">
-                        <label class="form-group">Zip</label>
-                        <input type="text" class="form-control" ng-model="member.zip">
-                        <label class="form-group">Food Allergies?</label>
-                        <textarea class="form-control" ng-model="member.allergy"></textarea>
+                        <h3 align="top">Add a New Member!</h3>
+                        <div class="update-edit-spacing">
+                            <span>First Name</span>
+                            <span type="text" class="form-control" ng-model="member.first_name"></span>
+                        </div>
+                        <div class="update-edit-spacing">
+                            <span class="form-group">Last Name</span>
+                            <span type="text" class="form-control" ng-model="member.last_name"></span>
+                        </div>
+                        <div class="update-edit-spacing">
+                            <span class="form-group">Phone Number</span>
+                            <span type="text" class="form-control" ng-model="member.phone_number"></span>
+                        </div>
+                        <div class="update-edit-spacing">
+                            <span class="form-group">Street Address</span>
+                            <span type="text" class="form-control" ng-model="member.street"></span>
+                        </div>
+                        <div class="update-edit-spacing">
+                            <span class="form-group">Apartment Number</span>
+                            <span type="text" class="form-control" ng-model="member.apartment_number" placeholder="e.g.   Apt. 8"></span>
+                        </div>
+                        <div class="update-edit-spacing">
+                            <span class="form-group">City</span>
+                            <span type="text" class="form-control" ng-model="member.city"></span>
+                        </div>
+                        <div class="update-edit-spacing">
+                            <span class="form-group">State</span>
+                            <span type="text" class="form-control" ng-model="member.state"></span>
+                        </div>
+                        <div class="update-edit-spacing">
+                            <span class="form-group">Zip</span>
+                            <span type="text" class="form-control" ng-model="member.zip"></span>
+                        </div>
+                        <div class="update-edit-spacing">
+                            <span class="form-group">Food Allergies?</span>
+                            <textarea class="form-control" ng-model="member.allergy"></textarea>
+                        </div>
                         <br>
                         <button class="btn btn-primary" ng-click="addMember()"></span>Add Member</button>
                         <button class="btn btn-danger" role="button">Cancel</button>
