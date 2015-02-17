@@ -1,18 +1,9 @@
-<div class="container-fluid">
-    <div class="row">
-        <!--<div class="col-md-2">-->
-            <!--<div ng-repeat="event in events">-->
-                <!--<input ng-model="event.title"/>-->
-            <!--</div>-->
-        <!--</div>-->
-
-        <div class="container">
-            <div class="alert-success calAlert" ng-show="alertMessage != undefined && alertMessage != ''">
-                <h4>{{alertMessage}}</h4>
-            </div>
-                       <div ui-calendar="uiConfig.calendar" ng-model="eventSources"></div>
-        </div>
+<div class="container">
+    <br>
+    <div class="alert-success calAlert" ng-show="alertMessage != undefined && alertMessage != ''">
+        <h4>{{alertMessage}}</h4>
     </div>
+    <div ui-calendar="uiConfig.calendar" ng-model="eventSources"></div>
 </div>
 
 
@@ -30,9 +21,6 @@
         <!--</div>-->
     <!--</div>-->
 <!--</footer>-->
-
-
-</body>
 
 
 
