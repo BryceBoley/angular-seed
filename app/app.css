@@ -120,6 +120,10 @@ nav ul li a:focus {
  * Calendar
  */
 
+.update-edit-spacing {
+	padding-top: 50px;
+}
+
 .hero-unit {
 	position: relative;
 	padding: 40px 0;
