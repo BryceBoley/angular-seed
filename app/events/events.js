@@ -90,13 +90,21 @@ angular.module('myApp.events', ['ngRoute'])
             //$scope.alertMessage = ('Event Droped to make dayDelta ' + delta);
             //save new date to database
 
-            var eventCopy = angular.copy(event);
+            var eventCopy = {
+                title: event.title,
+                id: event._id,
+                comment: event.comment,
+                host: event.host,
+                start: event.start,
+                when: event.when
+            };
 
             var day = eventCopy.start.getDate();
             var month = eventCopy.start.getMonth() + 1;
             var year = eventCopy.start.getFullYear();
 
-            eventCopy.start = year + '-' + month + '-' + day
+            eventCopy.start = year + '-' + month + '-' + day;
+            JSON.stringify(eventCopy);
 
             Restangular.all('events/' + event.id).customPUT(eventCopy).then(function () {
                     //alert("Event date was changed successfully!");
@@ -125,7 +133,7 @@ angular.module('myApp.events', ['ngRoute'])
             modalInstance.result.then(function (deleteEvent) {
                 if (deleteEvent) { // Delete the event.
                     Restangular.one('events', ev.id).customDELETE().then(function () {
-                            alert('Your event was successfully deleted!');
+
                         },
                         function () {
                             alert('There was a problem deleting your event')
@@ -155,7 +163,7 @@ angular.module('myApp.events', ['ngRoute'])
 
             if (confirmation) {
                 Restangular.one('events', $scope.eventId).customDELETE().then(function () {
-                        alert('Your event was successfully deleted!');
+
                         $location.path('/events/');
                     },
                     function () {
@@ -163,6 +171,8 @@ angular.module('myApp.events', ['ngRoute'])
                     })
             }
         };
+
+
 
         /* alert on Resize */
         $scope.alertOnResize = function (event, delta, revertFunc, jsEvent, ui, view) {
