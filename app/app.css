@@ -8,16 +8,34 @@ body {
 /*
  * Groups page
  */
-.outer-profile {
-	border: solid gray 1px;
-    border-radius: 5px;
+
+.group-info-border {
+	z-index: 1;
+	border: solid #1c4255 2px;
+    border-radius: 15px;
+	padding: 30px;
+	min-height: 254px;
+	margin-bottom: 100px;
+	background-color: white;
 }
 
-.inner-profile {
-    border: solid gray 1px;
+.outer-profile {
+	z-index: 2;
+	border: solid #1c4255 2px;
+    border-radius: 15px;
+	padding: 30px;
+	min-height: 254px;
+	margin-bottom: 100px;
+	background-color: white;
+}
+
+.inner-profile-border {
+    /*border: solid gray 1px;*/
     border-radius: 5px;
-	padding: 15px;
+	padding-top: 30px;
+	padding-bottom: -10px;
 	text-align: center;
+	margin: -15px;
 }
 
 .list-header {
@@ -40,7 +58,6 @@ button {
 nav {
     margin: 0px;
 }
-
 
 nav ul {
     list-style: none;
@@ -69,7 +86,6 @@ a {
     display: inline-block;
     margin: 5px 5px;
 }
-
 
 nav ul li a {
     color: white;

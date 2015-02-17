@@ -1,27 +1,24 @@
-<footer>
-    <div class="row">
-        <div>
-            <div class="thumbnail">
-                <div class="caption">
-                    <div form-group>
-                        <h3 align="top">Create A Dinner Group!</h3>
-                        {{dateBounds.start.toDateString()}}
-                        <br>
-                        <!--<label class="">Date</label>-->
-                        <!--<textarea class="form-control" ng-model="event.when"></textarea>-->
-                        <label>Title</label>
-                        <textarea class="form-control" ng-model="event.title"></textarea>
-                        <label>When</label>
-                        <textarea class="form-control" ng-model="event.when"></textarea>
-                        <label class="form-group">Host</label>
-                        <textarea class="form-control" ng-model="event.host"></textarea>
-                        <label>Comments About Event:</label>
-                        <textarea class="form-control" ng-model="event.comment"></textarea>
-                        <button class="btn btn-success btn-md" ng-click="ok()"><span class="glyphicon glyphicon-cloud-upload"></span>Add Event</button>
-                        <button class="danger" ng-click="cancel()">Cancel</button>
-                    </div>
-                </div>
-            </div>
+<div class="thumbnail">
+    <div class="caption">
+        <div form-group>
+            <h3 align="top">Update Your Event</h3>
+            {{dateBounds.start.toDateString()}}
+            <br><br>
+            <!--<label class="">Date</label>-->
+            <!--<textarea class="form-control" ng-model="event.when"></textarea>-->
+            <label>Whatcha cookin?</label>
+            <input type="text" class="form-control" ng-model="event.title"></textarea>
+            <!--<label>Where</label>-->
+            <!--<span><input type="text" class="form-control" ng-model="event.title"></span>-->
+            <label>When</label>
+            <input type="text" class="form-control" ng-model="event.when">
+            <!--<label class="form-group">Host</label>-->
+            <!--<input type="text" class="form-control" ng-model="event.host">-->
+            <label>Comments</label>
+            <textarea class="form-control" ng-model="event.comment"></textarea>
+            <br>
+            <button class="btn btn-primary btn-md" ng-click="ok()">Add Event</button>
+            <button class="btn btn-danger" ng-click="cancel()">Cancel</button>
         </div>
     </div>
-</footer>
+</div>
