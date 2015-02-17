@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <div class = "container-fluid">
     <div class="row">
         <div class="col-sm-2 col-md-2 offset= -1">
@@ -10,6 +11,24 @@
                             <a href="#/members/{{ member.id }}" class="btn btn-primary btn-xs" role="button">INFO</a>
                             <a href="#/add-member" class="btn btn-primary btn-xs" role="button">ADD</a>
                         </div>
+=======
+<div class = "container">
+    <br>
+    <a href="#/add-member" class="btn btn-custom xs" role="button">Add Member</a>
+    <br><br><br>
+    <div id="group-info-border">
+        <div id="group-info-text">
+            Sunday Dinner Group -- Best dinner group ever!
+        </div>
+    </div>
+    <br><br>
+    <div class="row outer-profile-border">
+        <div class="col-lg-3" ng-repeat="member in members">
+            <div class="member-card">
+                <div class="inner-profile-border">
+                    <div class="thumbnail">
+                         <input type="file" onchange="angular.element(this).scope().uploadFile(this.files)"/>
+>>>>>>> Stashed changes
                     </div>
                 </div>
             </div>
