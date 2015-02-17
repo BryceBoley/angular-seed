@@ -227,6 +227,7 @@ angular.module('myApp.events', ['ngRoute'])
             modalInstance.result.then(function (event) {
 
 
+
                 var eventCopy = angular.copy(event);
 
                 var day = eventCopy.start.getDate();
@@ -247,15 +248,23 @@ angular.module('myApp.events', ['ngRoute'])
         };
 
         $scope.convertDate = function (event) {
-            var eventCopy = angular.copy(event);
+            var eventCopy = {
+                title: event.title,
+                id: event._id,
+                comment: event.comment,
+                host: event.host,
+                start: event.start,
+                when: event.when
+            };
 
             var day = eventCopy.start.getDate();
             var month = eventCopy.start.getMonth() + 1;
             var year = eventCopy.start.getFullYear();
 
             eventCopy.start = year + '-' + month + '-' + day;
+            return JSON.stringify(eventCopy);
 
-            return eventCopy;
+            //return eventCopy;
         };
 
         /* config object */
