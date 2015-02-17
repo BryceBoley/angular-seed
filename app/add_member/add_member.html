@@ -6,17 +6,23 @@
                 <div class="caption">
                     <div form-group ng-model="newMemberName">
                         <h3 align="top">Add A New Member!</h3>
-                        <label class="form-group">Name</label>
-                        <textarea class="form-control" ng-model="member.name"></textarea>
+                        <label class="form-group">First Name</label>
+                        <input type="text" class="form-control" ng-model="member.first_name">
+                        <label class="form-group">Last Name</label>
+                        <input type="text" class="form-control" ng-model="member.last_name">
                         <label class="form-group">Phone Number</label>
-                        <textarea class="form-control" ng-model="member.phone_number"></textarea>
+                        <input type="text" class="form-control" ng-model="member.phone_number">
                         <label class="form-group">Street Address</label>
-                        <textarea class="form-control" ng-model="member.street"></textarea>
+                        <input type="text" class="form-control" ng-model="member.street">
+                        <label class="form-group">Apartment Number?</label>
+                        <input type="text" class="form-control" ng-model="member.apartment_number" placeholder="e.g.   Apt. 8"></textarea>
                         <label class="form-group">City</label>
-                        <textarea class="form-control" ng-model="member.city"></textarea>
+                        <input type="text" class="form-control" ng-model="member.city">
                         <label class="form-group">State</label>
-                        <textarea class="form-control" ng-model="member.state"></textarea>
-                        <label class="form-group">Food Allergies</label>
+                        <input type="text" class="form-control" ng-model="member.state">
+                        <label class="form-group">Zip</label>
+                        <input type="text" class="form-control" ng-model="member.zip">
+                        <label class="form-group">Food Allergies?</label>
                         <textarea class="form-control" ng-model="member.allergy"></textarea>
                         <br>
                         <button class="btn btn-primary" ng-click="addMember()"></span>Add Member</button>
@@ -27,6 +33,5 @@
         </div>
     </div>
 </div>
-
 
 
