@@ -6,6 +6,7 @@
                     <!--<form editable-form name="editableForm"></form>-->
                     <div form-group ng-model="newMemberName">
                         <h3 align="top">Member Info</h3>
+
                         <div class="update-edit-spacing">
                             <span><b>First Name</b></span>
                             <input type="text" class="form-control word-padding" ng-model="member.first_name">
@@ -29,7 +30,7 @@
                         <div class="update-edit-spacing">
                             <span><b>Apartment Number</b></span>
                             <input type="text" class="form-control word-padding" ng-model="member.apartment_number">
-                             <!--<span class="form-control word-padding" editable-text="member.apartment_number" ng-model="member.street">{{ member.apartment_number }}</span>-->
+                            <!--<span class="form-control word-padding" editable-text="member.apartment_number" ng-model="member.street">{{ member.apartment_number }}</span>-->
                         </div>
                         <div class="update-edit-spacing">
                             <span><b>City</b></span>
@@ -41,7 +42,7 @@
                             <input type="text" class="form-control word-padding" ng-model="member.state">
                             <!--<span class="form-control word-padding" editable-text="member.state" ng-model="member.state">{{ member.state }}</span>-->
                         </div>
-                         <div class="update-edit-spacing">
+                        <div class="update-edit-spacing">
                             <span><b>Zip</b></span>
                             <input type="text" class="form-control word-padding" ng-model="member.zip">
                             <!--<span class="form-control word-padding" editable-text="member.zip" ng-model="member.zip">{{ member.zip }}</span>-->
@@ -52,10 +53,17 @@
                             <!--<span class="form-control word-padding" editable-text="member.allergy" ng-model="member.allergy">{{ member.allergy }}</span>-->
                         </div>
                         <br><br>
+
+                        <div class="thumbnail">
+                            <input type="file" onchange="angular.element(this).scope().uploadFile(this.files)"/>
+                        </div>
+
+                        <br><br>
                         <!--<span ng-show="editableForm.$visible">-->
-                            <button type="submit" class="btn btn-success" ng-click = "editMember()">Update</button>
-                            <button type="button" class="btn btn-primary" ng-disabled="editableForm.$waiting" ng-click="editableForm.$cancel()">Cancel</button>
-                            <button type="button" class="btn btn-danger"ng-click="deleteMember()">Delete</button>
+                        <button type="submit" class="btn btn-success" ng-click="editMember()">Update</button>
+
+
+                        <button type="button" class="btn btn-danger" ng-click="deleteMember()">Delete</button>
                         <!--</span>-->
                     </div>
                 </div>

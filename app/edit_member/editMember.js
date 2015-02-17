@@ -9,7 +9,7 @@ angular.module('myApp.editMember', ['ngRoute'])
         });
     }])
 
-    .controller('EditMemberCtrl', ['$scope', 'Restangular', '$routeParams', '$location', function($scope, Restangular, $routeParams, $location) {
+    .controller('EditMemberCtrl', ['$scope', 'Restangular', '$routeParams', '$location', '$http', function($scope, Restangular, $routeParams, $location, $http) {
 
         $scope.memberId = $routeParams.memberId;
 
@@ -46,5 +46,7 @@ angular.module('myApp.editMember', ['ngRoute'])
 
 
 
-        }
+        };
+
+
     }]);

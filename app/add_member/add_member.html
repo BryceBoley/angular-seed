@@ -42,6 +42,10 @@
                             <textarea class="form-control word-padding" ng-model="member.allergy"></textarea>
                         </div>
                         <br>
+                        <div class="thumbnail">
+                            <input type="file" onchange="angular.element(this).scope().uploadFile(this.file)"/>
+                        </div>
+                        <br>
                         <button class="btn btn-primary" ng-click="addMember()"></span>Add Member</button>
                         <button class="btn btn-danger" role="button">Cancel</button>
                     </div>
