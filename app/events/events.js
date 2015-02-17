@@ -157,57 +157,6 @@ angular.module('myApp.events', ['ngRoute'])
         };
 
 
-        $scope.deleteEvent = function () {
-            console.log('line 155');
-            var confirmation = confirm('Are you sure you want to delete this event? This cannot be undone');
-
-            if (confirmation) {
-                Restangular.one('events', $scope.eventId).customDELETE().then(function () {
-
-                        $location.path('/events/');
-                    },
-                    function () {
-                        alert('There was a problem deleting your event')
-                    })
-            }
-        };
-
-
-
-        /* alert on Resize */
-        $scope.alertOnResize = function (event, delta, revertFunc, jsEvent, ui, view) {
-            $scope.alertMessage = ('Event Resized to make dayDelta ' + delta);
-        };
-        /* add and removes an event source of choice */
-        $scope.addRemoveEventSource = function (sources, source) {
-            var canAdd = 0;
-            angular.forEach(sources, function (value, key) {
-                if (sources[key] === source) {
-                    sources.splice(key, 1);
-                    canAdd = 1;
-                }
-            });
-            if (canAdd === 0) {
-                sources.push(source);
-            }
-        };
-
-        /* remove event */
-        $scope.remove = function (index) {
-            $scope.events.splice(index, 1);
-        };
-        /* Change View */
-        $scope.changeView = function (view, calendar) {
-            uiCalendarConfig.calendars[calendar].fullCalendar('changeView', view);
-        };
-        /* Change View */
-        $scope.renderCalender = function (calendar) {
-            if (uiCalendarConfig.calendars[calendar]) {
-                uiCalendarConfig.calendars[calendar].fullCalendar('render');
-            }
-        };
-
-
 
         var selectDateModal = function (start, end) {
 
@@ -246,6 +195,61 @@ angular.module('myApp.events', ['ngRoute'])
                     })
             });
         };
+
+
+
+        $scope.deleteEvent = function () {
+            console.log('line 155');
+            var confirmation = confirm('Are you sure you want to delete this event? This cannot be undone');
+
+            if (confirmation) {
+                Restangular.one('events', $scope.eventId).customDELETE().then(function () {
+
+                        $location.path('/events/');
+                    },
+                    function () {
+                        alert('There was a problem deleting your event')
+                    })
+            }
+        };
+
+
+
+        /* alert on Resize */
+        $scope.alertOnResize = function (event, delta, revertFunc, jsEvent, ui, view) {
+            $scope.alertMessage = ('Sorry, mult-day dinners won\'t be saved ;P');
+        };
+        /* add and removes an event source of choice */
+        $scope.addRemoveEventSource = function (sources, source) {
+            var canAdd = 0;
+            angular.forEach(sources, function (value, key) {
+                if (sources[key] === source) {
+                    sources.splice(key, 1);
+                    canAdd = 1;
+                }
+            });
+            if (canAdd === 0) {
+                sources.push(source);
+            }
+        };
+
+
+        /* remove event */
+        $scope.remove = function (index) {
+            $scope.events.splice(index, 1);
+        };
+        /* Change View */
+        $scope.changeView = function (view, calendar) {
+            uiCalendarConfig.calendars[calendar].fullCalendar('changeView', view);
+        };
+        /* Change View */
+        $scope.renderCalender = function (calendar) {
+            if (uiCalendarConfig.calendars[calendar]) {
+                uiCalendarConfig.calendars[calendar].fullCalendar('render');
+            }
+        };
+
+
 
         $scope.convertDate = function (event) {
             var eventCopy = {

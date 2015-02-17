@@ -1,22 +1,25 @@
-<footer>
-    <div class="row">
-        <div class="col-sm-4 col-md-4">
-            <div class="thumbnail">
-                <div class="caption">
-                    <div form-group>
-                        <h3 align="top">Create A Dinner Group!</h3>
-                        <label class="">Date</label>
-                        <textarea class="form-control" ng-model="event.when"></textarea>
-                        <label>Location</label>
-                        <textarea class="form-control" ng-model="event.location"></textarea>
-                        <label class="form-group">Event Description</label>
-                        <textarea class="form-control" ng-model="event.description"></textarea>
-                        <label>Comments About Event:</label>
-                        <textarea class="form-control" ng-model="event.comments"></textarea>
-                        <button class="btn btn-success btn-md" ng-click="addEvent()"><span class="glyphicon glyphicon-cloud-upload"></span>Add Event</button>
-                    </div>
-                </div>
+<div class="thumbnail">
+    <div class="caption">
+        <div class="form-group">
+            <h3 align="top">Create A Dinner Group!</h3>
+            <div>
+                <label class="">Date</label>
+                <input type="text" class="form-control word-padding" ng-model="event.when">
             </div>
+            <div>
+                <label>Location</label>
+                <input type="text" class="form-control word-padding" ng-model="event.location">
+            </div>
+            <div>
+                <label class="form-group">Event Description</label>
+                <input type="text" class="form-control word-padding" ng-model="event.description">
+            </div>
+            <div>
+                <label>Comments About Event:</label>
+                <textarea class="form-control word-padding" ng-model="event.comments"></textarea>
+            </div>
+            <br>
+                <button class="btn btn-success btn-md" ng-click="addEvent()"><span class="glyphicon glyphicon-cloud-upload"></span>Add Event</button>
         </div>
     </div>
-</footer>
+</div>
