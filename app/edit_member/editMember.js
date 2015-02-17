@@ -41,7 +41,7 @@ angular.module('myApp.editMember', ['ngRoute'])
                     alert('Information saved!')
                 },
                 function () {
-                    alert('There was a problem updating your event')
+                    alert('There was a problem updating your event.\nDid you fill out all of the required fields?')
                 })
 
 
