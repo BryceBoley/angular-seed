@@ -38,7 +38,7 @@ angular.module('myApp.editMember', ['ngRoute'])
 
             Restangular.one('members', $scope.memberId).customPUT($scope.member).then(function() {
                     $location.path('/members');
-                    alert('Information saved!')
+                    //alert('Information updated!')
                 },
                 function () {
                     alert('There was a problem updating your event.\nDid you fill out all of the required fields?')
