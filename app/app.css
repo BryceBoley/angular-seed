@@ -8,11 +8,18 @@ body {
 /*
  * Groups page
  */
+.btn-primary {
+	color:#fff;
+	background-color:#3f92bc;
+}
 
 .update-edit-spacing {
 	padding-top: 8px;
 }
 
+.word-padding {
+	padding: 7px;
+}
 #group-info-border {
 	z-index: 1;
 	border: solid #95c4db 1px;

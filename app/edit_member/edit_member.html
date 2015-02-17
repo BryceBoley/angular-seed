@@ -3,49 +3,61 @@
         <div class="col-lg-4">
             <div class="thumbnail">
                 <div class="caption">
-                    <form editable-form name="editableForm"></form>
-                    <div class="update-edit-spacing">
-                        <span><b>First Name</b></span>
-                        <span class="form-control" editable-text="member.first_name" ng-model="member.name">{{ member.first_name }}</span>
+                    <!--<form editable-form name="editableForm"></form>-->
+                    <div form-group ng-model="newMemberName">
+                        <h3 align="top">Member Info</h3>
+                        <div class="update-edit-spacing">
+                            <span><b>First Name</b></span>
+                            <input type="text" class="form-control word-padding" ng-model="member.first_name">
+                            <!--<span class="form-control word-padding" editable-text="member.first_name" ng-model="member.name">{{ member.first_name }}</span>-->
+                        </div>
+                        <div class="update-edit-spacing">
+                            <span><b>Last Name</b></span>
+                            <input type="text" class="form-control word-padding" ng-model="member.last_name">
+                            <!--<span class="form-control word-padding" editable-text="member.last_name" ng-model="member.name">{{ member.last_name }}</span>-->
+                        </div>
+                        <div class="update-edit-spacing">
+                            <span><b>Phone Number</b></span>
+                            <input type="text" class="form-control word-padding" ng-model="member.phone_number">
+                            <!--<span class="form-control word-padding" editable-text="member.phone_number" ng-model="member.phone_number">{{ member.phone_number }}</span>-->
+                        </div>
+                        <div class="update-edit-spacing">
+                            <span><b>Street</b></span>
+                            <input type="text" class="form-control word-padding" ng-model="member.street">
+                            <!--<span class="form-control word-padding" editable-text="member.street" ng-model="member.street">{{ member.street }}</span>-->
+                        </div>
+                        <div class="update-edit-spacing">
+                            <span><b>Apartment Number</b></span>
+                            <input type="text" class="form-control word-padding" ng-model="member.apartment_number">
+                             <!--<span class="form-control word-padding" editable-text="member.apartment_number" ng-model="member.street">{{ member.apartment_number }}</span>-->
+                        </div>
+                        <div class="update-edit-spacing">
+                            <span><b>City</b></span>
+                            <input type="text" class="form-control word-padding" ng-model="member.city">
+                            <!--<span class="form-control word-padding" editable-text="member.city" ng-model="member.city">{{ member.city }}</span>-->
+                        </div>
+                        <div class="update-edit-spacing">
+                            <span><b>State</b></span>
+                            <input type="text" class="form-control word-padding" ng-model="member.state">
+                            <!--<span class="form-control word-padding" editable-text="member.state" ng-model="member.state">{{ member.state }}</span>-->
+                        </div>
+                         <div class="update-edit-spacing">
+                            <span><b>Zip</b></span>
+                            <input type="text" class="form-control word-padding" ng-model="member.zip">
+                            <!--<span class="form-control word-padding" editable-text="member.zip" ng-model="member.zip">{{ member.zip }}</span>-->
+                        </div>
+                        <div class="update-edit-spacing">
+                            <span><b>Allergy</b></span>
+                            <textarea class="form-control word-padding" ng-model="member.allergy"></textarea>
+                            <!--<span class="form-control word-padding" editable-text="member.allergy" ng-model="member.allergy">{{ member.allergy }}</span>-->
+                        </div>
+                        <br><br>
+                        <!--<span ng-show="editableForm.$visible">-->
+                            <button type="submit" class="btn btn-success" ng-click = "editMember()">Update</button>
+                            <button type="button" class="btn btn-primary" ng-disabled="editableForm.$waiting" ng-click="editableForm.$cancel()">Cancel</button>
+                            <button type="button" class="btn btn-danger"ng-click="deleteMember()">Delete</button>
+                        <!--</span>-->
                     </div>
-                    <div class="update-edit-spacing">
-                        <span><b>Last Name</b></span>
-                        <span class="form-control" editable-text="member.last_name" ng-model="member.name">{{ member.last_name }}</span>
-                    </div>
-                    <div class="update-edit-spacing">
-                        <span><b>Phone Number</b></span>
-                        <span class="form-control" editable-text="member.phone_number" ng-model="member.phone_number">{{ member.phone_number }}</span>
-                    </div>
-                    <div class="update-edit-spacing">
-                        <span><b>Street</b></span>
-                        <span class="form-control" editable-text="member.street" ng-model="member.street">{{ member.street }}</span>
-                    </div>
-                     <div class="update-edit-spacing">
-                        <span><b>Apartment Number</b></span>
-                        <span class="form-control" editable-text="member.apartment_number" ng-model="member.street">{{ member.apartment_number }}</span>
-                    </div>
-                    <div class="update-edit-spacing">
-                        <span><b>City</b></span>
-                        <span class="form-control" editable-text="member.city" ng-model="member.city">{{ member.city }}</span>
-                    </div>
-                    <div class="update-edit-spacing">
-                        <span><b>State</b></span>
-                        <span class="form-control" editable-text="member.state" ng-model="member.state">{{ member.state }}</span>
-                    </div>
-                     <div class="update-edit-spacing">
-                        <span><b>Zip</b></span>
-                        <span class="form-control" editable-text="member.zip" ng-model="member.zip">{{ member.zip }}</span>
-                    </div>
-                    <div class="update-edit-spacing">
-                        <span><b>Allergy</b></span>
-                        <span class="form-control" editable-text="member.allergy" ng-model="member.allergy">{{ member.allergy }}</span>
-                    </div>
-                    <br><br>
-                    <!--<span ng-show="editableForm.$visible">-->
-                        <button type="submit" class="btn btn-success" ng-click = "editMember()">Save</button>
-                        <button type="button" class="btn btn-primary" ng-disabled="editableForm.$waiting" ng-click="editableForm.$cancel()">Cancel</button>
-                        <button type="button" class="btn btn-danger"ng-click="deleteMember()">Delete</button>
-                    <!--</span>-->
                 </div>
             </div>
         </div>
