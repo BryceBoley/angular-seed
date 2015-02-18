@@ -41,7 +41,7 @@ angular.module('myApp.editMember', ['ngRoute'])
                     //alert('Information updated!')
                 },
                 function () {
-                    alert('There was a problem updating your event.\nDid you fill out all of the required fields?')
+                    alert('There was a problem updating your event.\nDid you fill out all of the required fields?\nSome fields can only hold a certain amount of text.')
                 })
 
 
