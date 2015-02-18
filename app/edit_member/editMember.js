@@ -46,5 +46,13 @@ angular.module('myApp.editMember', ['ngRoute'])
 
 
 
-        }
+        };
+
+        $scope.cancel = function () {
+
+            $location.path('/members');
+
+
+        };
+
     }]);

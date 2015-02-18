@@ -12,9 +12,7 @@
         <div class="col-sm-3" ng-repeat="member in members">
             <div class="member-card">
                 <div class="inner-profile-border">
-                    <div class="thumbnail">
-                        <img src="..." alt="...">
-                    </div>
+                    <img ng-src="{{ member.profile_picture }}">
                     <div class="caption">
                         <li class="list-header">{{member.first_name}} {{member.last_name}}</li>
                         <li>{{ member.phone_number }}</li>
@@ -29,3 +27,12 @@
         </div>
     </div>
 </div>
+
+
+
+
+
+
+
+
+
