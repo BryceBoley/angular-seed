@@ -1,4 +1,3 @@
-
 body {
     padding-top: 70px;
     /*background-color: #d3d3d3;*/
@@ -8,7 +7,10 @@ body {
 /*
  * Groups page
  */
-
+img {
+	max-height: 150px;
+	max-width: 200px;
+}
 
 .btn-custom {
 	color:#fff;

@@ -200,7 +200,7 @@ angular.module('myApp.events', ['ngRoute'])
 
         $scope.deleteEvent = function () {
             console.log('line 155');
-            var confirmation = confirm('Are you sure you want to delete this event? This cannot be undone');
+            var confirmation = confirm('Are you sure you want to delete this event?\nThis cannot be undone.');
 
             if (confirmation) {
                 Restangular.one('events', $scope.eventId).customDELETE().then(function () {
@@ -280,9 +280,9 @@ angular.module('myApp.events', ['ngRoute'])
                 selectable: true,
                 select: selectDateModal,
                 header: {
-                    left: 'month agendaDay',
+                    left: '',                /*'month agendaDay'*/
                     center: 'title',
-                    right: 'today prev,next'
+                    right: 'prev, next'     /*'today prev,next'*/
                 },
 
                 eventClick: $scope.alertOnEventClick,
@@ -318,7 +318,7 @@ angular.module('myApp.events', ['ngRoute'])
         $scope.event = ev;
 
         $scope.deleteEvent = function () {
-            var confirmation = confirm('Are you sure you want to delete this event? This cannot be undone');
+            var confirmation = confirm('Are you sure you want to delete this event?\nThis cannot be undone.');
             if (confirmation) {
                 $modalInstance.close(true);
             }
