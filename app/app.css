@@ -137,6 +137,9 @@ nav ul li a:focus {
     color: white;
 }
 
+nav ul li a:active {
+	color: #a4cde1;
+}
 
 /*
  * Calendar
