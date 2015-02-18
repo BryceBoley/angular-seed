@@ -51,4 +51,10 @@ angular.module('myApp.addMember', ['ngRoute'])
             console.log($scope.member.profile_picture);
         };
 
+        $scope.cancel = function () {
+             $location.path('/members');
+
+
+        };
+
     }]);
