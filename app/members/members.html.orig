@@ -9,8 +9,22 @@
     </div>
     <br><br>
     <div class="row outer-profile-border">
-        <div class="col-md-3 col-sm-4" ng-repeat="member in members">
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+        <div class="col-sm-3" ng-repeat="member in members">
+            <!--<div class="member-card">-->
+||||||| merged common ancestors
+        <div class="col-sm-3" ng-repeat="member in members">
             <div class="member-card">
+=======
+        <div class="col-md-3 col-sm-4" ng-repeat="member in members">
+||||||| merged common ancestors
+        <div class="col-sm-3" ng-repeat="member in members">
+=======
+        <div class="col-md-3 col-sm-4" ng-repeat="member in members">
+>>>>>>> Stashed changes
+            <div class="member-card">
+>>>>>>> Stashed changes
                 <div class="inner-profile-border">
                     <img ng-src="{{ member.profile_picture }}">
                     <div class="caption">
@@ -23,7 +37,7 @@
                     <a href="#/members/{{ member.id }}" class="btn btn-custom btn-xs" role="button">Info</a>
                 </div>
                 <br><br>
-            </div>
+            <!--</div>-->
         </div>
     </div>
 </div>
