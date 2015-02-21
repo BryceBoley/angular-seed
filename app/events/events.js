@@ -217,7 +217,7 @@ angular.module('myApp.events', ['ngRoute'])
 
         /* alert on Resize */
         $scope.alertOnResize = function (event, delta, revertFunc, jsEvent, ui, view) {
-            $scope.alertMessage = ('Sorry, mult-day dinners won\'t be saved ;P');
+            $scope.alertMessage = ('Sorry, multi-day dinners won\'t be saved ;P');
         };
         /* add and removes an event source of choice */
         $scope.addRemoveEventSource = function (sources, source) {

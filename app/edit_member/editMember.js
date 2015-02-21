@@ -23,7 +23,6 @@ angular.module('myApp.editMember', ['ngRoute'])
 
             if (confirmation) {
                 Restangular.one('members', $scope.memberId).customDELETE().then(function () {
-                        //alert('Your member was successfully deleted!');
                         $location.path('/members/');
                     },
                     function () {
@@ -38,7 +37,6 @@ angular.module('myApp.editMember', ['ngRoute'])
 
             Restangular.one('members', $scope.memberId).customPUT($scope.member).then(function() {
                     $location.path('/members');
-                    //alert('Information updated!')
                 },
                 function () {
                     alert('There was a problem updating your event.\nDid you fill out all of the required fields?\nSome fields can only hold a certain amount of text.')

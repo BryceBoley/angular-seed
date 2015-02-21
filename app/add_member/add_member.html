@@ -3,7 +3,7 @@
         <div class="col-lg-4">
             <div class="thumbnail">
                 <div class="caption">
-                    <div form-group ng-model="newMemberName">
+                    <form form-group ng-model="newMemberName">
                         <h3 align="top">Add a New Member!</h3>
                         <div class="update-edit-spacing">
                             <span>First Name</span>
@@ -42,12 +42,12 @@
                             <textarea class="form-control word-padding" ng-model="member.allergy"></textarea>
                         </div>
                         <br>
-                        <div class="thumbnail">
-                            <input type="file" onchange="angular.element(this).scope().uploadFile(this.file)"/>
+                        <div>
+                            <input type="file" onchange="angular.element(this).scope().uploadFile(this.files)"/>
                         </div>
                         <button type="submit" class="btn btn-primary btn-xs" ng-click="addMember()">Add Member</button>
                         <button type="button" class="btn btn-danger btn-xs" ng-click="cancel()">Cancel</button>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
