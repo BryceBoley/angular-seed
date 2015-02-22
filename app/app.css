@@ -3,14 +3,34 @@ body {
     /*background-color: #d3d3d3;*/
 }
 
-
 /*
  * Groups page
  */
+
 img {
-	max-height: 150px;
-	max-width: 200px;
+	height: 100%;
+	min-width: 100%;
+	left: 50%;
+	position: relative;
+	transform: translateX(-50%);
 }
+
+.image-crop {
+	height: 160px;
+	width: 160px;
+	overflow: hidden;
+	margin: auto;
+}
+
+.member-div {
+	height: 345px;
+}
+
+
+li {
+	list-style-type: none;
+}
+
 
 .btn-custom {
 	color:#fff;
@@ -63,14 +83,6 @@ img {
 .list-header {
 	list-style-type: none;
 	font-weight: bold;
-}
-
-li {
-	list-style-type: none;
-}
-
-button {
-	margin: 0px 5px;
 }
 
 
