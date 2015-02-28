@@ -3,10 +3,10 @@
         <div class="col-lg-4">
             <div class="thumbnail">
                 <div class="caption">
-                    <form>
+                    <form form-group ng-model="newMemberName">
                         <h3 align="top">Add a New Member!</h3>
                         <div class="update-edit-spacing">
-                            <label>First Name</label>
+                            <span>First Name</span>
                             <input type="text" class="form-control word-padding" ng-model="member.first_name">
                         </div>
                         <div class="update-edit-spacing">
@@ -45,10 +45,9 @@
                         <div>
                             <input type="file" ng-model="onchange" onchange="angular.element(this).scope().uploadFile(this.files)"/>
                         </div>
-                        <div>
-                            <button type="submit" class="btn btn-primary btn-xs" ng-click="addMember()">Add Member</button>
-                            <button type="button" class="btn btn-danger btn-xs" ng-click="cancel()">Cancel</button>
-                        </div>
+                        <br>
+                        <button type="submit" class="btn btn-primary btn-xs" ng-click="addMember()">Add Member</button>
+                        <button type="button" class="btn btn-danger btn-xs" ng-click="cancel()">Cancel</button>
                     </form>
                 </div>
             </div>
