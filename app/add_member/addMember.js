@@ -11,18 +11,7 @@ angular.module('myApp.addMember', ['ngRoute'])
 
     .controller('AddMemberCtrl', ['$scope', 'Restangular', '$location', '$http', function ($scope, Restangular, $location, $http) {
 
-        //$scope.addMember = function () {
-        //    Restangular.all('members/').customPOST($scope.member).then(function () {
-        //            $location.path('/members');
-        //        },
-        //        function () {
-        //            alert("Please enter member information.")
-        //        });
-        //
-        //};
-
         $scope.addMember = function () {
-            //var boundary = "---------------------------7da24f2e50046";
             var fd = new FormData();
             fd.append("profile_picture", $scope.member.profile_picture);
             fd.append("first_name", $scope.member.first_name);
@@ -34,17 +23,7 @@ angular.module('myApp.addMember', ['ngRoute'])
             fd.append("state", $scope.member.state);
             fd.append("zip", $scope.member.zip);
 
-            console.log(fd)
-
-            //
-            //Restangular.all('members/').customPOST($scope.member).then(function () {
-            //        $location.path('/members');
-            //    },
-            //    function () {
-            //        alert("Please enter member information.")
-            //    });
-
-
+            console.log(fd);
 
             $http.post('http://localhost:8002/members/', fd, {
                 headers: {'Content-type': undefined },

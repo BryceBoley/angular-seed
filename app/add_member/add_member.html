@@ -3,10 +3,10 @@
         <div class="col-lg-4">
             <div class="thumbnail">
                 <div class="caption">
-                    <form form-group ng-model="newMemberName">
+                    <form>
                         <h3 align="top">Add a New Member!</h3>
                         <div class="update-edit-spacing">
-                            <span>First Name</span>
+                            <label>First Name</label>
                             <input type="text" class="form-control word-padding" ng-model="member.first_name">
                         </div>
                         <div class="update-edit-spacing">
@@ -39,14 +39,16 @@
                         </div>
                         <div class="update-edit-spacing">
                             <span class="form-group">Food Allergies?</span>
-                            <textarea class="form-control word-padding" ng-model="member.allergy"></textarea>
+                            <input class="form-control word-padding" ng-model="member.allergy">
                         </div>
                         <br>
                         <div>
-                            <input type="file" onchange="angular.element(this).scope().uploadFile(this.files)"/>
+                            <input type="file" ng-model="onchange" onchange="angular.element(this).scope().uploadFile(this.files)"/>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-xs" ng-click="addMember()">Add Member</button>
-                        <button type="button" class="btn btn-danger btn-xs" ng-click="cancel()">Cancel</button>
+                        <div>
+                            <button type="submit" class="btn btn-primary btn-xs" ng-click="addMember()">Add Member</button>
+                            <button type="button" class="btn btn-danger btn-xs" ng-click="cancel()">Cancel</button>
+                        </div>
                     </form>
                 </div>
             </div>
