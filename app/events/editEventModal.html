@@ -1,0 +1,36 @@
+<div class="thumbnail">
+    <div class="caption">
+        <div class="form-group">
+            <h3 align="top"><b>Update Event</b></h3>
+            {{dateBounds.start.toDateString()}}
+            <br><br>
+            <div>
+                <label>Whatcha cookin?</label>
+                <input type="text" class="form-control word-padding" ng-model="event.title">
+            </div>
+            <br>
+            <!--<div>-->
+                <!--<label>Where</label>-->
+                <!--<span><input type="text" class="form-control" ng-model="event.title"></span>-->
+            <!--</div>-->
+            <!--<br>-->
+            <div>
+                <label>When</label>
+                <input type="text" class="form-control word-padding" ng-model="event.when">
+            </div>
+            <br>
+            <!--<div>-->
+                <!--<span>host </span>-->
+                <!--<span class="form-control" editable-text="event.host" ng-model="event.host"><!--{{{ event.host || "empty"  }}</span>-->
+            <!--</div>-->
+            <!--<br>-->
+            <div>
+                <label>Comments </label>
+                <textarea type="text" class="form-control word-padding" ng-model="event.comment"></textarea>
+            </div>
+            <br>
+            <button class="btn btn-primary btn-md"ng-click="editEvent()">Update Event</button>
+            <button class="btn btn-danger btn-md"ng-click="deleteEvent()">Delete Event</button>
+        </div>
+    </div>
+</div>

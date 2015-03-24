@@ -1,0 +1,65 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="thumbnail">
+                <div class="caption">
+                    <form type="file">
+                        <div form-group ng-model="newMemberName">
+                            <h3 align="top">Member Info</h3>
+                            <div class="update-edit-spacing">
+                                <span><b>First Name</b></span>
+                                <input type="text" class="form-control word-padding" ng-model="member.first_name">
+                            </div>
+                            <div class="update-edit-spacing">
+                                <span><b>Last Name</b></span>
+                                <input type="text" class="form-control word-padding" ng-model="member.last_name">
+                            </div>
+                            <div class="update-edit-spacing">
+                                <span><b>Phone Number</b></span>
+                                <input type="text" class="form-control word-padding" ng-model="member.phone_number">
+                            </div>
+                            <div class="update-edit-spacing">
+                                <span><b>Street</b></span>
+                                <input type="text" class="form-control word-padding" ng-model="member.street">
+                            </div>
+                            <div class="update-edit-spacing">
+                                <span><b>Apartment Number</b></span>
+                                <input type="text" class="form-control word-padding" ng-model="member.apartment_number">
+                            </div>
+                            <div class="update-edit-spacing">
+                                <span><b>City</b></span>
+                                <input type="text" class="form-control word-padding" ng-model="member.city">
+                            </div>
+                            <div class="update-edit-spacing">
+                                <span><b>State</b></span>
+                                <input type="text" class="form-control word-padding" ng-model="member.state">
+                            </div>
+                            <div class="update-edit-spacing">
+                                <span><b>Zip</b></span>
+                                <input type="text" class="form-control word-padding" ng-model="member.zip">
+                            </div>
+                            <div class="update-edit-spacing">
+                                <span><b>Food Allergies?</b></span>
+                                <input class="form-control word-padding" ng-model="member.allergy">
+                            </div>
+                            <br>
+                            <div class="thumbnail">
+                                <input type="file" onchange="angular.element(this).scope().uploadFile(this.files)">
+
+                            </div>
+                            <div>
+                                <button type="submit" class="btn btn-success btn-xs"  ng-click="editMember()">Update</button>
+                                <button type="button" class="btn btn-primary btn-xs" ng-click="cancel()">Cancel</button>
+                                <button type="button" class="btn btn-danger btn-xs" ng-click="deleteMember()">Delete</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

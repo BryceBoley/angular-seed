@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="thumbnail">
+                <div class="caption">
+                    <form form-group ng-model="newMemberName">
+                        <h3 align="top">Add a New Member!</h3>
+                        <div class="update-edit-spacing">
+                            <span>First Name</span>
+                            <input type="text" class="form-control word-padding" ng-model="member.first_name">
+                        </div>
+                        <div class="update-edit-spacing">
+                            <span class="form-group">Last Name</span>
+                            <input type="text" class="form-control word-padding" ng-model="member.last_name">
+                        </div>
+                        <div class="update-edit-spacing">
+                            <span class="form-group">Phone Number</span>
+                            <input type="text" class="form-control word-padding" ng-model="member.phone_number">
+                        </div>
+                        <div class="update-edit-spacing">
+                            <span class="form-group">Street Address</span>
+                            <input type="text" class="form-control word-padding" ng-model="member.street">
+                        </div>
+                        <div class="update-edit-spacing">
+                            <span class="form-group">Apartment Number</span>
+                            <input type="text" class="form-control word-padding" ng-model="member.apartment_number" placeholder="e.g.   Apt. 8">
+                        </div>
+                        <div class="update-edit-spacing">
+                            <span class="form-group">City</span>
+                            <input type="text" class="form-control word-padding" ng-model="member.city">
+                        </div>
+                        <div class="update-edit-spacing">
+                            <span class="form-group">State</span>
+                            <input type="text" class="form-control word-padding" ng-model="member.state">
+                        </div>
+                        <div class="update-edit-spacing">
+                            <span class="form-group">Zip</span>
+                            <input type="text" class="form-control word-padding" ng-model="member.zip">
+                        </div>
+                        <div class="update-edit-spacing">
+                            <span class="form-group">Food Allergies?</span>
+                            <input class="form-control word-padding" ng-model="member.allergy">
+                        </div>
+                        <br>
+                        <div>
+                            <input type="file" ng-model="onchange" onchange="angular.element(this).scope().uploadFile(this.files)"/>
+                        </div>
+                        <br>
+                        <button type="submit" class="btn btn-primary btn-xs" ng-click="addMember()">Add Member</button>
+                        <button type="button" class="btn btn-danger btn-xs" ng-click="cancel()">Cancel</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

@@ -1,30 +1,286 @@
-/* app css stylesheet */
-
-.menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
+body {
+    padding-top: 70px;
+    /*background-color: #d3d3d3;*/
 }
 
-.menu:before {
-  content: "[";
+/*
+ * Groups page
+ */
+
+img {
+	height: 100%;
+	min-width: 100%;
+	left: 50%;
+	position: relative;
+	transform: translateX(-50%);
 }
 
-.menu:after {
-  content: "]";
+.image-crop {
+	height: 160px;
+	width: 160px;
+	overflow: hidden;
+	margin: auto;
 }
 
-.menu > li {
-  display: inline;
+.member-div {
+	height: 345px;
 }
 
-.menu > li:before {
-  content: "|";
-  padding-right: 0.3em;
+
+li {
+	list-style-type: none;
 }
 
-.menu > li:nth-child(1):before {
-  content: "";
-  padding: 0;
+
+.btn-custom {
+	color:#fff;
+	background-color:#3f92bc;
 }
+
+.update-edit-spacing {
+	padding-top: 8px;
+}
+
+.word-padding {
+	padding: 7px;
+}
+#group-info-border {
+	z-index: 1;
+	border: solid #95c4db 1px;
+    border-radius: 15px;
+	padding-top: 7px;
+	padding-bottom: 16px;
+	padding-left: 25px;
+	margin-bottom: -55px;
+}
+
+#group-info-text {
+	font-weight: lighter bold;
+	font-size: 1.3em;
+}
+
+.outer-profile-border {
+	z-index: 2;
+	position:relative;
+	border: solid #1c4255 1px;
+    border-radius: 15px;
+	padding: 30px;
+	min-height: 254px;
+	margin-top: 2px;
+	margin-bottom: 100px;
+	background-color: white;
+}
+
+.inner-profile-border {
+    /*border: solid gray 1px;*/
+    border-radius: 5px;
+	padding-top: 30px;
+	padding-bottom: -10px;
+	text-align: center;
+	margin: -15px;
+}
+
+.list-header {
+	list-style-type: none;
+	font-weight: bold;
+}
+
+
+/*
+ * Navbar
+ */
+nav {
+    margin: 0px;
+}
+
+nav ul {
+    list-style: none;
+    overflow: hidden;
+    z-index: 10;
+    position: fixed; /*relative*/
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    font-size: 1.7em;
+    font-weight: lighter;
+    text-align: center;
+    background-color: #3A87AD; /*#fafafa*/
+}
+
+nav li {
+    float: left;
+    display: block;
+}
+
+a {
+    width: 100%
+    text-align: center;
+    padding: 0px 15px;
+    border-radius: 50px;
+    display: inline-block;
+    margin: 5px 5px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: Lato,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+
+/*
+ * Navbar effects
+ */
+nav ul li a:hover {
+    text-decoration: none;
+    /*background-color: #3A87AD;*/
+    color: #a4cde1;
+}
+
+nav ul li a:link {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+nav ul li a:focus {
+    text-decoration: none;
+    list-style-type: none;
+    background-color: #3A87AD;
+    color: white;
+}
+
+nav ul li a:active {
+	color: #a4cde1;
+}
+
+/*
+ * Calendar
+ */
+
+.hero-unit {
+	position: relative;
+	padding: 40px 0;
+	color: #fff;
+	text-align: center;
+	text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
+	background: #020031;
+	background: -moz-linear-gradient(45deg, #020031 0%, #6d3353 100%);
+	background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#020031), color-stop(100%,#6d3353));
+	background: -webkit-linear-gradient(45deg, #020031 0%,#6d3353 100%);
+	background: -o-linear-gradient(45deg, #020031 0%,#6d3353 100%);
+	background: -ms-linear-gradient(45deg, #020031 0%,#6d3353 100%);
+	background: linear-gradient(45deg, #020031 0%,#6d3353 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#020031', endColorstr='#6d3353',GradientType=1 );
+	-webkit-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+	-moz-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+	box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+	border-radius: 0;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	-o-border-radius: 0;
+}
+
+.hero-unit .btn, .pagination-centered .btn {
+	float: none;
+	font-weight: normal;
+}
+.hero-unit p {
+	margin: 1em 0;
+}
+.bs-docs-social {
+	margin-top: 1em;
+	padding: 15px 0;
+	text-align: center;
+	background-color: rgba(245,245,245,0.3);
+	border-top: 1px solid rgba(255,255,255,0.3);
+	border-bottom: 1px solid rgba(221,221,221,0.3);
+}
+.bs-docs-social-buttons {
+	margin-left: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+	list-style: none;
+}
+.bs-docs-social-buttons li {
+	display: inline-block;
+	padding: 5px 8px;
+	line-height: 1;
+}
+td{
+    heigth: 100px;
+}
+
+/* Allows .modal-backdrop to remain on the page without blocking */
+.modal-backdrop {
+	overflow: hidden;
+	height: 0;
+	-webkit-transition: opacity 0.15s linear, height 0 0.2s linear;
+	-moz-transition: opacity 0.15s linear, height 0 0.2s linear;
+	-ms-transition: opacity 0.15s linear, height 0 0.2s linear;
+	-o-transition: opacity 0.15s linear, height 0 0.2s linear;
+	transition: opacity 0.15s linear, height 0 0.2s linear;
+}
+.modal-backdrop.in {
+	height: 100%;
+	-webkit-transition: opacity 0.15s linear;
+	-moz-transition: opacity 0.15s linear;
+	-ms-transition: opacity 0.15s linear;
+	-o-transition: opacity 0.15s linear;
+	transition: opacity 0.15s linear;
+}
+
+/*** Calendar ***/
+
+/*.calAlert{*/
+	/*width: 595px; float: right; margin-bottom: 5px;*/
+/*}*/
+
+/*.calXBtn{*/
+	/*float: right; margin-top: -5px; margin-right: -5px;*/
+/*}*/
+
+/*.calWell{*/
+	/*float: left; margin-bottom: 40px;*/
+/*}*/
+
+/*.fc-event.openSesame .fc-event-skin{*/
+	/*background-color: rgb(229, 229, 11);*/
+	/*color: black;*/
+/*}*/
+
+/*.fc-event.customFeed .fc-event-skin{*/
+	/*background-color: rgb(132, 222, 175);*/
+	/*color: black;*/
+/*}*/
+
+/*.calTools{*/
+	/*margin-bottom: 10px;*/
+/*}*/
+
+
+
+/*
+ * Media Queries
+ */
+
+@media screen and (max-width: 959px) {
+    #container {
+        width: 960px;
+        margin: 0 auto;
+    }
+
+    #left-column {
+        width: 700px;
+        float: left;
+        background: blue;
+    }
+
+    #right-column {
+        width: 260px;
+        float: left;
+        background: orange;
+    }
+}
+
+
+

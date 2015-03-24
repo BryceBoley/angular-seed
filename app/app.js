@@ -4,12 +4,18 @@
 angular.module('myApp', [
     'ngRoute',
     'myApp.events',
-    'myApp.view2',
+    'myApp.addEvent',
+    'myApp.members',
+    'myApp.addMember',
+    'myApp.editMember',
     'myApp.version',
-    'restangular'
+    'restangular',
+    'ui.calendar',
+    'ui.bootstrap'
+
 ])
     .config(['$routeProvider', 'RestangularProvider', function ($routeProvider, RestangularProvider) {
         $routeProvider.otherwise({redirectTo: '/events'});
 
-        RestangularProvider.setBaseUrl('http://localhost:8001');
+        RestangularProvider.setBaseUrl('http://localhost:8002');
     }]);
