@@ -43,8 +43,8 @@ angular.module('myApp.editMember', ['ngRoute'])
             fd.append("state", $scope.member.state);
             fd.append("zip", $scope.member.zip);
 
-            $http.put('http://localhost:8002/members/' + $scope.member.id, fd, {
-                headers: {'content-type': undefined},
+            $http.put('/api/members/' + $scope.member.id, fd, {
+                headers: {'content-type': undefined },
                 transformRequest: angular.identity
 
             }).success(function () {
@@ -58,8 +58,11 @@ angular.module('myApp.editMember', ['ngRoute'])
             console.log($scope.member.profile_picture);
         };
 
-        $scope.cancel = function () {
+        $scope.convertImageUrl = function (url) {
+            return url.replace(/http:.*media/, '/api/media');
+        };
 
+        $scope.cancel = function () {
             $location.path('/members');
 
         }

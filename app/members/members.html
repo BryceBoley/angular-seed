@@ -10,16 +10,18 @@
         <div class="col-md-3 col-sm-4 member-div" ng-repeat="member in members track by $index">
             <div class="inner-profile-border">
                 <div class="image-crop">
-                    <img ng-src="{{ member.profile_picture }}">
+                    <img ng-src="{{ convertImageUrl(member.profile_picture) }}">
                 </div>
                 <br>
                 <div class="caption">
-                    <li class="list-header">{{member.first_name  | cut:true:17:'...' }} {{member.last_name | cut:true:18:'...' }}</li>
-                    <li>{{ member.phone_number | limitTo : 15 }}</li>
-                    <li>{{ member.street | cut:true:35:'...' }}</li>
-                    <li>{{ member.apartment_number  | cut:true:30:'...' }}</li>
-                    <li>{{ member.city  | cut:true:20:'...' }} {{ member.state | limitTo : 15}} {{member.zip | limitTo : 14}}</li>
-                 </div>
+                    <ul>
+                        <li class="list-header">{{member.first_name  | cut:true:17:'...' }} {{member.last_name | cut:true:18:'...' }}</li>
+                        <li>{{ member.phone_number | limitTo : 15 }}</li>
+                        <li>{{ member.street | cut:true:35:'...' }}</li>
+                        <li>{{ member.apartment_number  | cut:true:30:'...' }}</li>
+                        <li>{{ member.city  | cut:true:20:'...' }} {{ member.state | limitTo : 15}} {{member.zip | limitTo : 14}}</li>
+                    </ul>
+                </div>
                 <a href="#/members/{{ member.id }}" class="btn btn-custom btn-xs" role="button">Info</a>
             </div>
         </div>

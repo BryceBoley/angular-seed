@@ -25,7 +25,7 @@ angular.module('myApp.addMember', ['ngRoute'])
 
             console.log(fd);
 
-            $http.post('http://localhost:8002/members/', fd, {
+            $http.post('/api/members/', fd, {
                 headers: {'Content-type': undefined },
                 transformRequest: angular.identity
 
@@ -40,10 +40,13 @@ angular.module('myApp.addMember', ['ngRoute'])
             console.log($scope.member.profile_picture);
         };
 
+        $scope.convertImageUrl = function (url) {
+            return url.replace(/http:.*media/, '/api/media');
+        };
+
         $scope.cancel = function () {
              $location.path('/members');
 
-
-        };
+        }
 
         }]);

@@ -13,6 +13,10 @@ angular.module('myApp.members', ['ngRoute'])
         Restangular.all('members').getList().then(function (data) {
             $scope.members = data;
         });
+
+        $scope.convertImageUrl = function (url) {
+            return url.replace(/http:.*media/, '/api/media');
+        };
     }])
 
     .filter('cut', function () {
